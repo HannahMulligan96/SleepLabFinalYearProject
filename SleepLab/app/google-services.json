@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "568656833262",
+    "firebase_url": "https://sleeplabtest.firebaseio.com",
+    "project_id": "sleeplabtest",
+    "storage_bucket": "sleeplabtest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568656833262:android:dcdaf30d763eacd0",
+        "android_client_info": {
+          "package_name": "com.nci.sleeplab"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568656833262-l5p1nfums8d5gmgpbffl4puiti66rk4j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nci.sleeplab",
+            "certificate_hash": "d5c203c75936e6c8cb14da550ed8acb1eeeca63e"
+          }
+        },
+        {
+          "client_id": "568656833262-ihfan1vk0vssnlso94hscl3rmqooqhoi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_hg3I7dnvN2fqXvJYojdjAQYRdbJfcKc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568656833262-ihfan1vk0vssnlso94hscl3rmqooqhoi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
