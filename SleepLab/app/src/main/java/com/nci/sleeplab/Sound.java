@@ -11,6 +11,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
+//sound view
 public class Sound extends AppCompatActivity {
     private static final String TAG = "Sound";
     @Override
