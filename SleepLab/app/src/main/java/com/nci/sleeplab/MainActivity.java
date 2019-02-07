@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //initializing firebase authentication
-        firebaseAuth =FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
-        if(firebaseAuth.getCurrentUser() != null){
+        if (firebaseAuth.getCurrentUser() != null) {
             //profile activity starts
             finish();
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
@@ -51,17 +51,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonRegister = (Button) findViewById(R.id.buttonRegister);
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textViewSignIn= (TextView) findViewById(R.id.textViewSignIn);
+        textViewSignIn = (TextView) findViewById(R.id.textViewSignIn);
 
         buttonRegister.setOnClickListener(this);
         textViewSignIn.setOnClickListener(this);
     }
 
-    private void registerUser(){
+    private void registerUser() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        if(TextUtils.isEmpty(email)) {
+        if (TextUtils.isEmpty(email)) {
             //email is empty
             Toast.makeText(this, "Please enter email", Toast.LENGTH_SHORT).show();
             //return stops the function from executing any further
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
-        if(TextUtils.isEmpty(password)){
+        if (TextUtils.isEmpty(password)) {
             //password is empty
             Toast.makeText(this, "Please enter password", Toast.LENGTH_SHORT).show();
             //return stops the function from executing any further
@@ -86,10 +86,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         //checking if success
                         if (task.isSuccessful()) {
-                                finish();
-                                startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
+                            finish();
+                            startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
                             //Toast.makeText(MainActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
-                        }else{
+                        } else {
                             Toast.makeText(MainActivity.this, "Could not register user", Toast.LENGTH_SHORT).show();
                         }
                     }
@@ -99,11 +99,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if(view ==buttonRegister){
+        if (view == buttonRegister) {
             registerUser();
         }
 
-        if(view == textViewSignIn) {
+        if (view == textViewSignIn) {
             //will open login activity
             startActivity(new Intent(this, LoginActivity.class));
         }

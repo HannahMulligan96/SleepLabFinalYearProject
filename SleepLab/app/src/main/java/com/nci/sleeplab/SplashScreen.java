@@ -3,6 +3,7 @@ package com.nci.sleeplab;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -19,6 +20,6 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
             }
-        },5000);
+        }, 5000);
     }
 }

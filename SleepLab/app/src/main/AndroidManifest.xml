@@ -29,10 +29,16 @@
         <activity
             android:name=".RoomTemp"
             android:label="Room temperature sensor readings" />
-        <activity android:name=".Hum"></activity>
+        <activity
+            android:name=".Hum"
+            android:label="humidity sensor readings" />
         <activity
             android:name=".Sound"
             android:label="Sound Sensor readings" />
+        <activity android:name=".settings"
+            android:label="settings"/>
+        <activity android:name=".about"
+            android:label="About Sleep Lab" />
     </application>
 
 </manifest>

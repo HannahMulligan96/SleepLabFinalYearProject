@@ -33,9 +33,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        firebaseAuth =FirebaseAuth.getInstance();
+        firebaseAuth = FirebaseAuth.getInstance();
 
-        if(firebaseAuth.getCurrentUser() != null){
+        if (firebaseAuth.getCurrentUser() != null) {
             //profile activity starts
             finish();
             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
                             //start the user profile page
                             finish();
                             startActivity(new Intent(getApplicationContext(), ProfileActivity.class));
@@ -88,16 +88,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
+    @Override
+    public void onClick(View view) {
+        if (view == buttonSignIn) {
+            userLogin();
+        }
 
-@Override
-        public void onClick (View view){
-            if (view == buttonSignIn) {
-                userLogin();
-            }
-
-            if (view == textViewLogIn) {
-                finish();
-                startActivity(new Intent(this, MainActivity.class));
-            }
+        if (view == textViewLogIn) {
+            finish();
+            startActivity(new Intent(this, MainActivity.class));
         }
     }
+}
