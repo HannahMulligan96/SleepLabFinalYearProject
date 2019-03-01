@@ -61,16 +61,12 @@
                 android:layout_margin="16dp">
 
                 <ImageView
+                    android:id="@+id/diaryOnClick"
                     android:layout_width="66dp"
                     android:layout_height="67dp"
                     android:layout_gravity="center_horizontal"
-                    android:src="@drawable/body" />
+                    android:src="@drawable/diary" />
 
-                <ImageView
-                    android:layout_width="66dp"
-                    android:layout_height="67dp"
-                    android:layout_gravity="center_horizontal"
-                    android:src="@drawable/temp2" />
 
 
             </LinearLayout>
@@ -81,7 +77,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:fontFamily="sans-serif-smallcaps"
-                android:text="Body Temp"
+                android:text="Sleep Log"
                 android:textColor="#594A42"
                 android:textSize="20sp" />
 

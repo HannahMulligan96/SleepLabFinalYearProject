@@ -17,6 +17,8 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.Calendar;
+
 public class ProfileActivity extends AppCompatActivity {
 
     //firebase authentication
@@ -28,6 +30,8 @@ public class ProfileActivity extends AppCompatActivity {
     private ImageView TempView;
     private ImageView HumView;
     private ImageView SoundView;
+    private ImageView diaryView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +59,7 @@ public class ProfileActivity extends AppCompatActivity {
         TempView = (ImageView) findViewById(R.id.TempOnClick);
         HumView = (ImageView) findViewById(R.id.HumOnClick);
         SoundView = (ImageView) findViewById(R.id.SoundOnClick);
+        diaryView = (ImageView) findViewById(R.id.diaryOnClick);
 
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +105,18 @@ public class ProfileActivity extends AppCompatActivity {
 
 
         });
+
+        //Diary activity
+        diaryView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getBaseContext(), Log.class);
+                startActivity(myIntent);
+            }
+
+
+        });
+
 
         //Sound activity
         SoundView.setOnClickListener(new View.OnClickListener() {

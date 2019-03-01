@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test">
+
+    <TextView
+        android:id="@+id/dateView"
+        android:layout_width="126dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="33dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="date"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/sleepHours"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/monthView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/monthView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="74dp"
+        android:layout_marginBottom="41dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="month"
+        android:textSize="35sp"
+        app:layout_constraintBottom_toTopOf="@+id/sleepHours"
+        app:layout_constraintEnd_toStartOf="@+id/dateView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/sleepHours"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="339dp"
+        android:text="What time did you go to bed?"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sleepBed"
+        app:layout_constraintStart_toStartOf="@+id/sleepBed"
+        app:layout_constraintTop_toBottomOf="@+id/monthView" />
+
+    <TextView
+        android:id="@+id/sleepBed"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="37dp"
+        android:text="How many hours did you sleep?"
+        app:layout_constraintBottom_toTopOf="@+id/sleepTime"
+        app:layout_constraintEnd_toEndOf="@+id/sleepTime"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/sleepTime"
+        app:layout_constraintTop_toBottomOf="@+id/sleepHours"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/sleepTime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="46dp"
+        android:text="What time did you wake up?"
+        app:layout_constraintBottom_toTopOf="@+id/save"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sleepBed" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="236dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="32dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>
