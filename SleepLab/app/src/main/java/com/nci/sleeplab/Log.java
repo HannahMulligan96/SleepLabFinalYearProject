@@ -40,7 +40,7 @@ public class Log extends AppCompatActivity {
 
 
                 Toast.makeText(Log.this, selectedDate, Toast.LENGTH_SHORT).show();
-            } //display the date
+            }  //Dsiplay todays date
 
             @Override
             public void onDateUnselected(Date date) {
