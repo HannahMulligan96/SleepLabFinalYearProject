@@ -81,6 +81,7 @@ public class Test extends AppCompatActivity implements TimePickerDialog.OnTimeSe
         myButton.setOnClickListener(new View.OnClickListener() {
 
             final TextView myText = findViewById(R.id.bedTime);
+            //final TextView myText = findViewById(R.id.sleepTime);
 
             @Override
             public void onClick(View v) {
@@ -141,6 +142,8 @@ public class Test extends AppCompatActivity implements TimePickerDialog.OnTimeSe
         TextView textView = (TextView) findViewById(R.id.bedTime);
         textView.setText("" + hourOfDay + ":" + minute);
 
-     
     }
 }
+
+//    TextView textView1 = (TextView) findViewById(R.id.sleepTime);
+//        textView1.setText("" + hourOfDay + ":" + minute);

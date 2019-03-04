@@ -1,75 +1,32 @@
 package com.nci.sleeplab;
 
 import android.content.Intent;
-import android.provider.ContactsContract;
-import android.view.Menu;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.support.v7.widget.CardView;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+public class CollectedData extends AppCompatActivity {
 
-import java.util.Calendar;
 
-public class ProfileActivity extends AppCompatActivity {
-
-    //firebase authentication
-    private FirebaseAuth firebaseAuth;
-
-    private Button buttonLogout;
-    private TextView textViewUserEmail;
     private ImageView lightView;
     private ImageView TempView;
     private ImageView HumView;
     private ImageView SoundView;
-    private ImageView diaryView;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_collected_data);
 
-
-        //initializing firebase authentication
-        firebaseAuth = FirebaseAuth.getInstance();
-        buttonLogout = (Button) findViewById(R.id.buttonLogout);
-
-
-        //Firebase authentication
-        if (firebaseAuth.getCurrentUser() == null) {
-            finish();
-            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-        }
-
-        FirebaseUser user = firebaseAuth.getCurrentUser();
-        // buttonLogout = (Button) findViewById(R.id.buttonLogout);
-        textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
-        textViewUserEmail.setText("welcome  " + user.getEmail());
 
         lightView = (ImageView) findViewById(R.id.lightOnClick);
         TempView = (ImageView) findViewById(R.id.TempOnClick);
         HumView = (ImageView) findViewById(R.id.HumOnClick);
         SoundView = (ImageView) findViewById(R.id.SoundOnClick);
-        diaryView = (ImageView) findViewById(R.id.diaryOnClick);
-
-        buttonLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //  firebaseAuth = FirebaseAuth.getInstance();
-                firebaseAuth.signOut();
-                Intent myIntent = new Intent(getBaseContext(), LoginActivity.class);
-                startActivity(myIntent);
-            }
-        });
 
 
         //Light activity
@@ -106,17 +63,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         });
 
-        //Diary activity
-        diaryView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent myIntent = new Intent(getBaseContext(), Log.class);
-                startActivity(myIntent);
-            }
-
-
-        });
-
 
         //Sound activity
         SoundView.setOnClickListener(new View.OnClickListener() {
@@ -131,28 +77,26 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
 
-    //Menu in action bar
+
+    //Home icon actionbar
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home, menu);
         return true;
     }
 
-
-    //Menu settings on select
+    //Home icon on select
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.settings:
-                Intent intent = new Intent(this, settings.class);
+            case R.id.home:
+                Intent intent = new Intent(this, MainActivity.class);
                 this.startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
 
+
+
 }
-
-
-
-
-

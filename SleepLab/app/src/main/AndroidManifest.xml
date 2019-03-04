@@ -22,7 +22,7 @@
         </activity>
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".Profile" />
         <activity
             android:name=".Light"
             android:label="Light sensor readings" />
@@ -42,7 +42,9 @@
             android:name=".about"
             android:label="About Sleep Lab" />
         <activity android:name=".Log" />
-        <activity android:name=".Test"></activity>
+        <activity android:name=".Test" />
+        <activity android:name=".CollectedData" />
+        <activity android:name=".User"></activity>
     </application>
 
 </manifest>

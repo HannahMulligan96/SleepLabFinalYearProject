@@ -33,7 +33,7 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.217"
-        app:layout_constraintStart_toEndOf="@+id/textViewHum"
+        app:layout_constraintStart_toEndOf="@+id/textViewUser"
         app:layout_constraintTop_toTopOf="parent" />
 
 
