@@ -49,6 +49,7 @@ public class Hum extends AppCompatActivity {
             DatabaseReference myRefTemp = database.getReference("Hum");
 
 
+
             final TextView myText = findViewById(R.id.textHum);
 
 
