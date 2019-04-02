@@ -27,7 +27,7 @@ public class Profile extends AppCompatActivity {
     private Button buttonLogout;
     private TextView textViewUserEmail;
     private ImageView DataView;
-    private ImageView UserView;
+    private ImageView AnalyzeView;
     private ImageView diaryView;
 
 
@@ -49,13 +49,12 @@ public class Profile extends AppCompatActivity {
         }
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        // buttonLogout = (Button) findViewById(R.id.buttonLogout);
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
         textViewUserEmail.setText("welcome  " + user.getEmail());
 
         //Set onclick to images
         DataView = (ImageView) findViewById(R.id.DataOnClick);
-        UserView = (ImageView) findViewById(R.id.UserOnClick);
+        AnalyzeView = (ImageView) findViewById(R.id.AnalyzeOnClick);
         diaryView = (ImageView) findViewById(R.id.diaryOnClick);
 
 
@@ -83,7 +82,7 @@ public class Profile extends AppCompatActivity {
 
 
         //User activity
-        UserView.setOnClickListener(new View.OnClickListener() {
+        AnalyzeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getBaseContext(), User.class);

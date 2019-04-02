@@ -16,7 +16,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class Test extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+public class userdata extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
 
 
     private TextView myDateView;
@@ -34,7 +34,7 @@ public class Test extends AppCompatActivity implements TimePickerDialog.OnTimeSe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.user_analyze);
 
 
         //Time picker widget on click listener for button
@@ -92,6 +92,7 @@ public class Test extends AppCompatActivity implements TimePickerDialog.OnTimeSe
         });
 
 
+        //Displaying month and day
         myDateView = (TextView) findViewById(R.id.dateView);
         myMonthView = (TextView) findViewById(R.id.monthView);
         mysleepTime = (TextView) findViewById(R.id.sleepTime);
@@ -103,29 +104,29 @@ public class Test extends AppCompatActivity implements TimePickerDialog.OnTimeSe
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
         mDay = c.get(Calendar.DAY_OF_MONTH);
-        if (mMonth == 1) {
+        if (mMonth == 0) {
             curMonth = "Jan";
-        } else if (mMonth == 2) {
+        } else if (mMonth == 1) {
             curMonth = "February";
-        } else if (mMonth == 3) {
+        } else if (mMonth == 2) {
             curMonth = "March";
-        } else if (mMonth == 4) {
+        } else if (mMonth == 3) {
             curMonth = "April";
-        } else if (mMonth == 5) {
+        } else if (mMonth == 4) {
             curMonth = "May";
-        } else if (mMonth == 6) {
+        } else if (mMonth == 5) {
             curMonth = "June";
-        } else if (mMonth == 7) {
+        } else if (mMonth == 6) {
             curMonth = "July";
-        } else if (mMonth == 8) {
+        } else if (mMonth == 7) {
             curMonth = "August";
-        } else if (mMonth == 9) {
+        } else if (mMonth == 8) {
             curMonth = "September";
-        } else if (mMonth == 10) {
+        } else if (mMonth == 9) {
             curMonth = "October";
-        } else if (mMonth == 11) {
+        } else if (mMonth == 10) {
             curMonth = "November";
-        } else if (mMonth == 12) {
+        } else if (mMonth == 11) {
             curMonth = "December";
         }
 
@@ -144,6 +145,12 @@ public class Test extends AppCompatActivity implements TimePickerDialog.OnTimeSe
 
     }
 }
+
+//  /*  public void onTimeSet(TimePicker view, int hourOfDay, int minute){
+//        TextView textView =(TextView) findViewById(R.id.sleepTime);
+//        textView.setText("" + hourOfDay + ":" + minute);
+//    }*/
+
 
 //    TextView textView1 = (TextView) findViewById(R.id.sleepTime);
 //        textView1.setText("" + hourOfDay + ":" + minute);

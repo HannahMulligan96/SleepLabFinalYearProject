@@ -42,9 +42,10 @@
             android:name=".about"
             android:label="About Sleep Lab" />
         <activity android:name=".Log" />
-        <activity android:name=".Test" />
+        <activity android:name=".userdata" />
         <activity android:name=".CollectedData" />
-        <activity android:name=".User"></activity>
+        <activity android:name=".User" />
+        <activity android:name=".SoundData"></activity>
     </application>
 
 </manifest>
