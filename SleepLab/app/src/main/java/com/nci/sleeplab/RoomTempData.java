@@ -1,12 +1,10 @@
 package com.nci.sleeplab;
 
 import android.graphics.Color;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
-
 
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
@@ -21,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class SoundData extends AppCompatActivity {
+public class RoomTempData extends AppCompatActivity {
 
     private int mYear;
     private int mMonth;
@@ -29,15 +27,15 @@ public class SoundData extends AppCompatActivity {
     private String curMonth;
     private TextView myDateView;
     private TextView myMonthView;
-    private static final String TAG = "Sound";
-
-
+    private static final String TAG = "Temp";
 
     BarChart barChart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sounddata);
+        setContentView(R.layout.activity_room_temp_data);
+
 
         myDateView = (TextView) findViewById(R.id.dateView);
         myMonthView = (TextView) findViewById(R.id.monthView);
@@ -77,47 +75,46 @@ public class SoundData extends AppCompatActivity {
         myDateView.setText(Integer.toString(mDay));
         myMonthView.setText((curMonth));
 
-
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRefSound = database.getReference("SoundValues");
+        DatabaseReference myRefTemp = database.getReference("TempValues");
 
-        myRefSound.addValueEventListener(new ValueEventListener() {
+        myRefTemp.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                final Integer barSound1= dataSnapshot.child("Monday/Sound1").getValue(Integer.class);
-                final Integer barSound2= dataSnapshot.child("Monday/Sound2").getValue(Integer.class);
-                final Integer barSound3= dataSnapshot.child("Monday/Sound3").getValue(Integer.class);
+                final Integer barTemp1= dataSnapshot.child("Monday/Temp1").getValue(Integer.class);
+                final Integer barTemp2= dataSnapshot.child("Monday/Temp2").getValue(Integer.class);
+                final Integer barTemp3= dataSnapshot.child("Monday/Temp3").getValue(Integer.class);
                 barChart = (BarChart) findViewById(R.id.bargraph);
 
 
                 ArrayList<BarEntry> barEntries = new ArrayList<>();
 
-                barEntries.add(new BarEntry(barSound1, 0));
-                barEntries.add(new BarEntry(barSound2, 1));
-                barEntries.add(new BarEntry(barSound3, 2));
+                barEntries.add(new BarEntry(barTemp1, 0));
+                barEntries.add(new BarEntry(barTemp2, 1));
+                barEntries.add(new BarEntry(barTemp3, 2));
                 barEntries.add(new BarEntry(290f, 3));
                 barEntries.add(new BarEntry(229f, 5));
                 barEntries.add(new BarEntry(259f, 6));
-                BarDataSet barDataSet = new BarDataSet(barEntries, "Sound Values");
+                BarDataSet barDataSet = new BarDataSet(barEntries, "Temp Values");
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
 
-                ArrayList<String> theLight = new ArrayList<>();
-                theLight.add("1:00");
-                theLight.add("2:00");
-                theLight.add("3:00");
-                theLight.add("4:00");
-                theLight.add("5:00");
-                theLight.add("6:00");
-                theLight.add("7:00");
+                ArrayList<String> theTemp = new ArrayList<>();
+                theTemp.add("1:00");
+                theTemp.add("2:00");
+                theTemp.add("3:00");
+                theTemp.add("4:00");
+                theTemp.add("5:00");
+                theTemp.add("6:00");
+                theTemp.add("7:00");
 
 
-                BarData theData = new BarData(theLight, barDataSet);
+                BarData theData = new BarData(theTemp, barDataSet);
                 barChart.setData(theData);
                 barChart.setTouchEnabled(false);
-             //barChart.getDescription().setEnabled(false);
+                //barChart.getDescription().setEnabled(false);
 
             }
 

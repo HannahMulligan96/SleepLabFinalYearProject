@@ -6,63 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".RoomTemp">
 
-  <!--  <TextView
-        android:id="@+id/textViewTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="163dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Room Temperature Sensor Readings "
-        android:textColor="#594A42"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />-->
+  <com.squareup.timessquare.CalendarPickerView
+      android:id="@+id/calendar"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
-  <ImageView
-      android:id="@+id/lightOnClick"
-      android:layout_width="126dp"
-      android:layout_height="120dp"
-      android:layout_gravity="center_horizontal"
-      android:layout_marginStart="8dp"
-      android:layout_marginTop="16dp"
-      android:layout_marginEnd="128dp"
-      android:src="@drawable/temp23"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="1.0"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/textTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="178dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="246dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-
-    <TextView
-        android:id="@+id/textViewLight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="212dp"
-        android:layout_marginEnd="163dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="The room temperature is:"
-        android:textColor="#594A42"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+  </com.squareup.timessquare.CalendarPickerView>
 
 </android.support.constraint.ConstraintLayout>

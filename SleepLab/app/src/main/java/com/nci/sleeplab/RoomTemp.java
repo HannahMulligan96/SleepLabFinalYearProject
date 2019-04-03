@@ -8,12 +8,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.squareup.timessquare.CalendarPickerView;
+
+import java.util.Calendar;
+import java.util.Date;
 
 public class RoomTemp extends AppCompatActivity {
 
@@ -37,40 +42,44 @@ public class RoomTemp extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private static final String TAG = "Temp";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_temp);
+        setContentView(R.layout.activity_sound);
 
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRefTemp = database.getReference("Temp");
+        Date today = new Date(); //starting at todays date
+        Calendar lastYear = Calendar.getInstance();
+        //nextYear.add(Calendar.DAY_OF_WEEK_IN_MONTH, 1); //Calendar set to 1 month in advance
+        lastYear.add(Calendar.DAY_OF_WEEK_IN_MONTH, +1); //Calendar set to 1 month in advance
+        CalendarPickerView datePicker = findViewById(R.id.calendar);
+        datePicker.init(today, lastYear.getTime()).withSelectedDate(today); //todays date
 
-
-        final TextView myText = findViewById(R.id.textTemp);
-
-
-        // Read from the database
-        myRefTemp.addValueEventListener(new ValueEventListener() {
+        datePicker.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                // This method is called once with the initial value and again
-                // whenever data at this location is updated.
-                myText.setText(dataSnapshot.getValue().toString());
+            public void onDateSelected(Date date) {
+
+                Calendar calSelected = Calendar.getInstance();
+                calSelected.setTime(date);
+
+                String selectedDate = "" + calSelected.get(Calendar.DAY_OF_MONTH)
+                        + " " + (calSelected.get(Calendar.MONTH) - 1)
+                        + " " + calSelected.get(Calendar.YEAR);
+
+                Intent myIntent = new Intent(getBaseContext(), RoomTempData.class);
+                startActivity(myIntent); //Open the user log
+
+
+                Toast.makeText(com.nci.sleeplab.RoomTemp.this, selectedDate, Toast.LENGTH_SHORT).show();
             }
 
             @Override
-            public void onCancelled(DatabaseError error) {
-                // Failed to read value
-                Log.w(TAG, "Failed to read value.", error.toException());
+            public void onDateUnselected(Date date) {
+
             }
         });
 
+
     }
-
 }
-
-
 

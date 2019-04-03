@@ -45,7 +45,8 @@
         <activity android:name=".userdata" />
         <activity android:name=".CollectedData" />
         <activity android:name=".User" />
-        <activity android:name=".SoundData"></activity>
+        <activity android:name=".SoundData" />
+        <activity android:name=".RoomTempData"></activity>
     </application>
 
 </manifest>

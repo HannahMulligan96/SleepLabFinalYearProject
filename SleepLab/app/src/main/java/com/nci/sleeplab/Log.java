@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.squareup.timessquare.CalendarPickerView;
+import com.squareup.timessquare.MonthView;
 
 import java.util.Calendar;
 import java.util.Date;
