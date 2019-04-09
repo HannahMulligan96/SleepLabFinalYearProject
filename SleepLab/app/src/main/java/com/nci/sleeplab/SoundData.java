@@ -97,9 +97,10 @@ public class SoundData extends AppCompatActivity {
                 barEntries.add(new BarEntry(barSound1, 0));
                 barEntries.add(new BarEntry(barSound2, 1));
                 barEntries.add(new BarEntry(barSound3, 2));
-                barEntries.add(new BarEntry(290f, 3));
-                barEntries.add(new BarEntry(229f, 5));
-                barEntries.add(new BarEntry(259f, 6));
+                barEntries.add(new BarEntry(371f, 3));
+                barEntries.add(new BarEntry(389f, 5));
+                barEntries.add(new BarEntry(395f, 6));
+                barEntries.add(new BarEntry(409f, 7));
                 BarDataSet barDataSet = new BarDataSet(barEntries, "Sound Values");
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});

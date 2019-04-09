@@ -3,10 +3,12 @@ package com.nci.sleeplab;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.squareup.timessquare.CalendarPickerView;
-import com.squareup.timessquare.MonthView;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -18,9 +20,13 @@ public class Log extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
 
+
+
+
+
         Date today = new Date();
         Calendar nextYear = Calendar.getInstance();
-        nextYear.add(Calendar.MONTH, 1); //Calendar set to 1 year in advance
+        nextYear.add(Calendar.DAY_OF_WEEK_IN_MONTH, 1); //Calendar set to 1 year in advance
 
         CalendarPickerView datePicker = findViewById(R.id.calendar);
         datePicker.init(today, nextYear.getTime()).withSelectedDate(today); //todays date
@@ -36,7 +42,7 @@ public class Log extends AppCompatActivity {
                         + " " + (calSelected.get(Calendar.MONTH) + 1)
                         + " " + calSelected.get(Calendar.YEAR);
 
-                Intent myIntent = new Intent(getBaseContext(), userdata.class);
+                Intent myIntent = new Intent(getBaseContext(), UserMessage.class);
                 startActivity(myIntent); //Open the user log
 
 
@@ -49,6 +55,25 @@ public class Log extends AppCompatActivity {
             }
         });
 
-
     }
+
+    //Home icon actionbar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home, menu);
+        return true;
+    }
+
+    //Home icon on select
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.home:
+                Intent intent = new Intent(this, MainActivity.class);
+                this.startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

@@ -34,7 +34,9 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.user_analyze);
+        setContentView(R.layout.activity_user_data);
+
+
 
 
         //Time picker widget on click listener for button
@@ -91,6 +93,16 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
             }
         });
 
+//       myButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent myIntent = new Intent(getBaseContext(), Log.class);
+//                startActivity(myIntent);
+//            }
+//
+//
+//        });
+
 
         //Displaying month and day
         myDateView = (TextView) findViewById(R.id.dateView);
@@ -146,10 +158,10 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
     }
 }
 
-//  /*  public void onTimeSet(TimePicker view, int hourOfDay, int minute){
-//        TextView textView =(TextView) findViewById(R.id.sleepTime);
-//        textView.setText("" + hourOfDay + ":" + minute);
-//    }*/
+  /*  public void onTimeSet(TimePicker view, int hourOfDay, int minute){
+        TextView textView =(TextView) findViewById(R.id.sleepTime);
+        textView.setText("" + hourOfDay + ":" + minute);
+    }
 
 
 //    TextView textView1 = (TextView) findViewById(R.id.sleepTime);

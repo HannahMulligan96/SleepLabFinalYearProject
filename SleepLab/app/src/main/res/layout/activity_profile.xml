@@ -15,7 +15,7 @@
 
         <TextView
             android:id="@+id/textViewUserEmail"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
@@ -23,7 +23,6 @@
             android:layout_marginStart="153dp"
             android:layout_marginTop="0dp"
             android:fontFamily="sans-serif-smallcaps"
-            android:text="..."
             android:textColor="#594A42" />
     </RelativeLayout>
 

@@ -50,7 +50,7 @@ public class Profile extends AppCompatActivity {
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
-        textViewUserEmail.setText("welcome  " + user.getEmail());
+        textViewUserEmail.setText( user.getEmail());
 
         //Set onclick to images
         DataView = (ImageView) findViewById(R.id.DataOnClick);
