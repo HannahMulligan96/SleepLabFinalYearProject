@@ -51,7 +51,7 @@ public class RoomTemp extends AppCompatActivity {
         Date today = new Date(); //starting at todays date
         Calendar lastYear = Calendar.getInstance();
         //nextYear.add(Calendar.DAY_OF_WEEK_IN_MONTH, 1); //Calendar set to 1 month in advance
-        lastYear.add(Calendar.DAY_OF_WEEK_IN_MONTH, +1); //Calendar set to 1 month in advance
+        lastYear.add(Calendar.DAY_OF_WEEK, +1); //Calendar set to 1 month in advance
         CalendarPickerView datePicker = findViewById(R.id.calendar);
         datePicker.init(today, lastYear.getTime()).withSelectedDate(today); //todays date
 

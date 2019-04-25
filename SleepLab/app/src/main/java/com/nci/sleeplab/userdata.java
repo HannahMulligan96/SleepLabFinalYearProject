@@ -1,6 +1,7 @@
 package com.nci.sleeplab;
 
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,16 +38,16 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
         setContentView(R.layout.activity_user_data);
 
 
-
-
         //Time picker widget on click listener for button
         Button button = (Button) findViewById(R.id.selectBtn);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                DialogFragment timePicker = new TimePickerFragment();
-                timePicker.show(getSupportFragmentManager(), "time picker");
+                DialogFragment timePicker1 = new TimePickerFragment();
+                timePicker1.show(getSupportFragmentManager(), "time picker1");
+
+
 
             }
         });
@@ -57,51 +58,43 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
             @Override
             public void onClick(View v) {
 
-                DialogFragment timePicker = new TimePickerFragment();
-                timePicker.show(getSupportFragmentManager(), "time picker");
+                DialogFragment timePicker2 = new TimePickerFragmentTwo();
+                timePicker2.show(getSupportFragmentManager(), "time picker2");
 
             }
         });
 
 
-        //Sending how many hours you slept to firebase
+        //Sending user dat to firebase save button
         myButton = (Button) findViewById(R.id.saveButton);
         myButton.setOnClickListener(new View.OnClickListener() {
 
-            final EditText myText = findViewById(R.id.sleepHours);
+            final EditText myText1 = findViewById(R.id.sleepHours);
+            final TextView myText2 = findViewById(R.id.bedTime);
+            final TextView myText3 = findViewById(R.id.sleepTime);
 
             @Override
             public void onClick(View v) {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRefSleep = database.getReference("SleepHours");
-                myRefSleep.setValue(myText.getText().toString().trim());
+                DatabaseReference myRefHours = database.getReference().child("UserData").child("HoursSlept");
+                DatabaseReference myRefBed = database.getReference().child("UserData").child("BedTime");
+                DatabaseReference myRefSleep = database.getReference().child("UserData").child("SleepTime");
+                myRefHours.setValue(myText1.getText().toString().trim());
+                myRefBed.setValue(myText2.getText().toString().trim());
+                myRefSleep.setValue(myText3.getText().toString().trim());
             }
         });
 
-        //Sending what time you went to bed to firebase
-        myButton = (Button) findViewById(R.id.saveButton);
+
         myButton.setOnClickListener(new View.OnClickListener() {
-
-            final TextView myText = findViewById(R.id.bedTime);
-            //final TextView myText = findViewById(R.id.sleepTime);
-
             @Override
             public void onClick(View v) {
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRefBed = database.getReference("BedTime");
-                myRefBed.setValue(myText.getText().toString().trim());
+                Intent myIntent = new Intent(getBaseContext(), Log.class);
+                startActivity(myIntent);
             }
-        });
 
-//       myButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent myIntent = new Intent(getBaseContext(), Log.class);
-//                startActivity(myIntent);
-//            }
-//
-//
-//        });
+
+        });
 
 
         //Displaying month and day
@@ -152,17 +145,14 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
     //Setting the time selected by the user to the views
     @Override
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        TextView textView = (TextView) findViewById(R.id.bedTime);
-        textView.setText("" + hourOfDay + ":" + minute);
 
+//        mysleepTime.setText("" + hourOfDay + ":" + minute);
+        mysleepTime.setText("Test" );
+        myBedTime.setText("test2");
+//        myBedTime.setText("" + hourOfDay + ":" + minute);
     }
+
+
+
+
 }
-
-  /*  public void onTimeSet(TimePicker view, int hourOfDay, int minute){
-        TextView textView =(TextView) findViewById(R.id.sleepTime);
-        textView.setText("" + hourOfDay + ":" + minute);
-    }
-
-
-//    TextView textView1 = (TextView) findViewById(R.id.sleepTime);
-//        textView1.setText("" + hourOfDay + ":" + minute);

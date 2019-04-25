@@ -41,19 +41,37 @@
         <activity
             android:name=".about"
             android:label="About Sleep Lab" />
-        <activity android:name=".Log"
+        <activity
+            android:name=".Log"
             android:label="Sleep Log" />
-        <activity android:name=".userdata"
+        <activity
+            android:name=".userdata"
             android:label="Sleep Log" />
-        <activity android:name=".CollectedData"
+        <activity
+            android:name=".CollectedData"
             android:label="Collected data" />
         <activity android:name=".User" />
-        <activity android:name=".SoundData"
+        <activity
+            android:name=".SoundData"
             android:label="Sound Sensor readings" />
-        <activity android:name=".RoomTempData"
+        <activity
+            android:name=".RoomTempData"
             android:label="Room temperature sensor readings " />
-        <activity android:name=".UserMessage"
-            android:label="Sleep Log" ></activity>
+        <activity
+            android:name=".UserMessage"
+            android:label="Sleep Log" />
+        <activity android:name=".LightData" />
+        <activity android:name=".Motion" />
+        <activity android:name=".MotionData" />
+        <activity
+            android:name=".AnalyzeMessage"
+            android:label="Analyse " />
+        <activity android:name=".AnalyzeCalendar" />
+        <activity android:name=".HumData" />
+        <activity
+            android:name=".analysefull"
+            android:label="@string/title_activity_analysefull"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

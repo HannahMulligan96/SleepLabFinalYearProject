@@ -86,9 +86,9 @@ public class SoundData extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                final Integer barSound1= dataSnapshot.child("Monday/Sound1").getValue(Integer.class);
-                final Integer barSound2= dataSnapshot.child("Monday/Sound2").getValue(Integer.class);
-                final Integer barSound3= dataSnapshot.child("Monday/Sound3").getValue(Integer.class);
+                final Integer barSound1= dataSnapshot.child("Sound/Sound1").getValue(Integer.class);
+                final Integer barSound2= dataSnapshot.child("Sound/Sound2").getValue(Integer.class);
+                final Integer barSound3= dataSnapshot.child("Sound/Sound3").getValue(Integer.class);
                 barChart = (BarChart) findViewById(R.id.bargraph);
 
 
@@ -101,21 +101,28 @@ public class SoundData extends AppCompatActivity {
                 barEntries.add(new BarEntry(389f, 5));
                 barEntries.add(new BarEntry(395f, 6));
                 barEntries.add(new BarEntry(409f, 7));
+                barEntries.add(new BarEntry(409f, 8));
+                barEntries.add(new BarEntry(409f, 9));
+                barEntries.add(new BarEntry(409f, 10));
+
                 BarDataSet barDataSet = new BarDataSet(barEntries, "Sound Values");
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
 
-                ArrayList<String> theLight = new ArrayList<>();
-                theLight.add("1:00");
-                theLight.add("2:00");
-                theLight.add("3:00");
-                theLight.add("4:00");
-                theLight.add("5:00");
-                theLight.add("6:00");
-                theLight.add("7:00");
+                ArrayList<String> theSound= new ArrayList<>();
+                theSound.add("11:00");
+                theSound.add("12:00");
+                theSound.add("1:00");
+                theSound.add("2:00");
+                theSound.add("3:00");
+                theSound.add("4:00");
+                theSound.add("5:00");
+                theSound.add("6:00");
+                theSound.add("7:00");
+                theSound.add("8:00");
 
 
-                BarData theData = new BarData(theLight, barDataSet);
+                BarData theData = new BarData(theSound, barDataSet);
                 barChart.setData(theData);
                 barChart.setTouchEnabled(false);
              //barChart.getDescription().setEnabled(false);

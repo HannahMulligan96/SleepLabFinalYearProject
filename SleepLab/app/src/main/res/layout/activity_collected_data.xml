@@ -145,6 +145,7 @@
                 android:layout_margin="16dp">
 
                 <ImageView
+                    android:id="@+id/MotionOnClick"
                     android:layout_width="66dp"
                     android:layout_height="67dp"
                     android:layout_gravity="center_horizontal"

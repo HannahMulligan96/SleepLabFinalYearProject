@@ -16,17 +16,19 @@ public class CollectedData extends AppCompatActivity {
     private ImageView TempView;
     private ImageView HumView;
     private ImageView SoundView;
+    private ImageView MotionView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collected_data);
 
-
+        //Onclick
         lightView = (ImageView) findViewById(R.id.lightOnClick);
         TempView = (ImageView) findViewById(R.id.TempOnClick);
         HumView = (ImageView) findViewById(R.id.HumOnClick);
         SoundView = (ImageView) findViewById(R.id.SoundOnClick);
+        MotionView = (ImageView) findViewById(R.id.MotionOnClick);
 
 
         //Light activity
@@ -69,6 +71,18 @@ public class CollectedData extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myIntent = new Intent(getBaseContext(), Sound.class);
+                startActivity(myIntent);
+            }
+
+
+        });
+
+
+        //Motion activity
+        MotionView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getBaseContext(), Motion.class);
                 startActivity(myIntent);
             }
 

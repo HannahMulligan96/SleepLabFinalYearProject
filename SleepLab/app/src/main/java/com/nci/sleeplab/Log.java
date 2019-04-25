@@ -22,11 +22,9 @@ public class Log extends AppCompatActivity {
 
 
 
-
-
         Date today = new Date();
         Calendar nextYear = Calendar.getInstance();
-        nextYear.add(Calendar.DAY_OF_WEEK_IN_MONTH, 1); //Calendar set to 1 year in advance
+        nextYear.add(Calendar.DAY_OF_WEEK, 1); //Calendar set to 1 week in advance
 
         CalendarPickerView datePicker = findViewById(R.id.calendar);
         datePicker.init(today, nextYear.getTime()).withSelectedDate(today); //todays date
@@ -42,7 +40,7 @@ public class Log extends AppCompatActivity {
                         + " " + (calSelected.get(Calendar.MONTH) + 1)
                         + " " + calSelected.get(Calendar.YEAR);
 
-                Intent myIntent = new Intent(getBaseContext(), UserMessage.class);
+                Intent myIntent = new Intent(getBaseContext(), userdata.class);
                 startActivity(myIntent); //Open the user log
 
 

@@ -4,28 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Light">
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/text_view_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20sp" />
+    <com.squareup.timessquare.CalendarPickerView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/lightOnClick"
-        android:maxWidth="100dp"
-        android:maxHeight="80dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/light"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </com.squareup.timessquare.CalendarPickerView>
 
-
-
-
-    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

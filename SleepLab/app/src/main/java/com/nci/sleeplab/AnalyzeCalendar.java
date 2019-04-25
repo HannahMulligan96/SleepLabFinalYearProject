@@ -13,9 +13,46 @@ import com.squareup.timessquare.CalendarPickerView;
 import java.util.Calendar;
 import java.util.Date;
 
+public class AnalyzeCalendar extends AppCompatActivity {
 
-//sound view
-public class Sound extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_analyze_calendar);
+
+
+        Date today = new Date();
+        Calendar nextYear = Calendar.getInstance();
+        nextYear.add(Calendar.DAY_OF_WEEK, 1); //Calendar set to 1 week in advance
+
+        CalendarPickerView datePicker = findViewById(R.id.calendar);
+        datePicker.init(today, nextYear.getTime()).withSelectedDate(today); //todays date
+
+        datePicker.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
+            @Override
+            public void onDateSelected(Date date) {
+
+                Calendar calSelected = Calendar.getInstance();
+                calSelected.setTime(date);
+
+                String selectedDate = "" + calSelected.get(Calendar.DAY_OF_MONTH)
+                        + " " + (calSelected.get(Calendar.MONTH) + 1)
+                        + " " + calSelected.get(Calendar.YEAR);
+
+                Intent myIntent = new Intent(getBaseContext(), analysefull.class);
+                startActivity(myIntent); //Open the user log
+
+
+                Toast.makeText(AnalyzeCalendar.this, selectedDate, Toast.LENGTH_SHORT).show();
+            }  //Dsiplay todays date
+
+            @Override
+            public void onDateUnselected(Date date) {
+
+            }
+        });
+
+    }
 
     //Home icon actionbar
     @Override
@@ -34,46 +71,6 @@ public class Sound extends AppCompatActivity {
                 this.startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
-    }
-
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sound);
-
-        Date today = new Date(); //starting at todays date
-        Calendar nextYear = Calendar.getInstance();
-        nextYear.add(Calendar.DAY_OF_WEEK, 1); //Calendar set to 1 month in advance
-
-        CalendarPickerView datePicker = findViewById(R.id.calendar);
-        datePicker.init(today, nextYear.getTime()).withSelectedDate(today); //todays date
-
-        datePicker.setOnDateSelectedListener(new CalendarPickerView.OnDateSelectedListener() {
-            @Override
-            public void onDateSelected(Date date) {
-
-                Calendar calSelected = Calendar.getInstance();
-                calSelected.setTime(date);
-
-                String selectedDate = "" + calSelected.get(Calendar.DAY_OF_MONTH)
-                        + " " + (calSelected.get(Calendar.MONTH) + 1)
-                        + " " + calSelected.get(Calendar.YEAR);
-
-                Intent myIntent = new Intent(getBaseContext(), SoundData.class);
-                startActivity(myIntent); //Open the user log
-
-
-                Toast.makeText(com.nci.sleeplab.Sound.this, selectedDate, Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onDateUnselected(Date date) {
-
-            }
-        });
-
-
     }
 
 }

@@ -1,9 +1,13 @@
 package com.nci.sleeplab;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -19,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class RoomTempData extends AppCompatActivity {
+public class MotionData extends AppCompatActivity {
 
     private int mYear;
     private int mMonth;
@@ -27,18 +31,35 @@ public class RoomTempData extends AppCompatActivity {
     private String curMonth;
     private TextView myDateView;
     private TextView myMonthView;
-    private static final String TAG = "Temp";
+    private static final String TAG = "Motion";
 
     BarChart barChart;
+    private Button saveView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_temp_data);
+        setContentView(R.layout.activity_motion_data);
+
 
 
         myDateView = (TextView) findViewById(R.id.dateView);
         myMonthView = (TextView) findViewById(R.id.monthView);
+
+        saveView = (Button) findViewById(R.id.save);
+
+        //save
+        saveView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(getBaseContext(), CollectedData.class);
+                startActivity(myIntent);
+            }
+
+
+        });
+
+
 
 
         final Calendar c = Calendar.getInstance();
@@ -75,60 +96,53 @@ public class RoomTempData extends AppCompatActivity {
         myDateView.setText(Integer.toString(mDay));
         myMonthView.setText((curMonth));
 
+
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRefTemp = database.getReference("TempValues");
+        DatabaseReference myRefMotion = database.getReference("MotionValues");
 
-        myRefTemp.addValueEventListener(new ValueEventListener() {
+        myRefMotion.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                final Integer barTemp1= dataSnapshot.child("Temp/Temp1").getValue(Integer.class);
-                final Integer barTemp2= dataSnapshot.child("Temp/Temp2").getValue(Integer.class);
-                final Integer barTemp3= dataSnapshot.child("Temp/Temp3").getValue(Integer.class);
+                final Integer barMotion1= dataSnapshot.child("Monday/Motion1").getValue(Integer.class);
+                final Integer barMotion2= dataSnapshot.child("Monday/Motion2").getValue(Integer.class);
+                // final Integer barSound3= dataSnapshot.child("Monday/Sound3").getValue(Integer.class);
                 barChart = (BarChart) findViewById(R.id.bargraph);
 
 
                 ArrayList<BarEntry> barEntries = new ArrayList<>();
 
-                barEntries.add(new BarEntry(barTemp1, 0));
-                barEntries.add(new BarEntry(barTemp2, 1));
-                barEntries.add(new BarEntry(barTemp3, 2));
-                barEntries.add(new BarEntry(29f, 3));
-                barEntries.add(new BarEntry(15f, 4));
-                barEntries.add(new BarEntry(22f, 5));
-                barEntries.add(new BarEntry(20f, 6));
-                barEntries.add(new BarEntry(23f, 7));
-                barEntries.add(new BarEntry(16f, 8));
-                barEntries.add(new BarEntry(29f, 9));
-
-//                barEntries.add(new BarEntry(259f, 7));
-//                barEntries.add(new BarEntry(259f, 8));
-//                barEntries.add(new BarEntry(259f, 9));
-//                barEntries.add(new BarEntry(259f, 10));
-                BarDataSet barDataSet = new BarDataSet(barEntries, "Temp Values");
+                barEntries.add(new BarEntry(barMotion1, 0));
+                barEntries.add(new BarEntry(barMotion2, 1));
+                //barEntries.add(new BarEntry(barSound3, 2));
+                barEntries.add(new BarEntry(371f, 2));
+                barEntries.add(new BarEntry(371f, 3));
+                barEntries.add(new BarEntry(389f, 5));
+                barEntries.add(new BarEntry(395f, 6));
+                barEntries.add(new BarEntry(409f, 7));
+                BarDataSet barDataSet = new BarDataSet(barEntries, "Motion Values");
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
 
-                ArrayList<String> theTemp = new ArrayList<>();
-                theTemp.add("11:00");
-                theTemp.add("12:00");
-                theTemp.add("1:00");
-                theTemp.add("2:00");
-                theTemp.add("3:00");
-                theTemp.add("4:00");
-                theTemp.add("5:00");
-                theTemp.add("6:00");
-                theTemp.add("7:00");
-                theTemp.add("8:00");
+                ArrayList<String> theMotion = new ArrayList<>();
+                theMotion.add("1:00");
+                theMotion.add("2:00");
+                theMotion.add("3:00");
+                theMotion.add("4:00");
+                theMotion.add("5:00");
+                theMotion.add("6:00");
+                theMotion.add("7:00");
 
 
-                BarData theData = new BarData(theTemp, barDataSet);
+                BarData theData = new BarData(theMotion, barDataSet);
                 barChart.setData(theData);
                 barChart.setTouchEnabled(false);
                 //barChart.getDescription().setEnabled(false);
 
             }
+
+
 
 
             @Override

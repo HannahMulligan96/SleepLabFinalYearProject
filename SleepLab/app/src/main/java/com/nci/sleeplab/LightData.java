@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class RoomTempData extends AppCompatActivity {
+public class LightData extends AppCompatActivity {
 
     private int mYear;
     private int mMonth;
@@ -27,14 +27,17 @@ public class RoomTempData extends AppCompatActivity {
     private String curMonth;
     private TextView myDateView;
     private TextView myMonthView;
-    private static final String TAG = "Temp";
+    private static final String TAG = "Light";
 
     BarChart barChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_temp_data);
+        setContentView(R.layout.activity_light_data);
+
+
+
 
 
         myDateView = (TextView) findViewById(R.id.dateView);
@@ -75,60 +78,57 @@ public class RoomTempData extends AppCompatActivity {
         myDateView.setText(Integer.toString(mDay));
         myMonthView.setText((curMonth));
 
+
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRefTemp = database.getReference("TempValues");
+        DatabaseReference myRefLight = database.getReference("LightValues");
 
-        myRefTemp.addValueEventListener(new ValueEventListener() {
+        myRefLight.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                final Integer barTemp1= dataSnapshot.child("Temp/Temp1").getValue(Integer.class);
-                final Integer barTemp2= dataSnapshot.child("Temp/Temp2").getValue(Integer.class);
-                final Integer barTemp3= dataSnapshot.child("Temp/Temp3").getValue(Integer.class);
+                final Integer barLight1= dataSnapshot.child("Light/Light1").getValue(Integer.class);
+                final Integer barLight2= dataSnapshot.child("Light/Light2").getValue(Integer.class);
+                final Integer barLight3= dataSnapshot.child("Light/Light3").getValue(Integer.class);
                 barChart = (BarChart) findViewById(R.id.bargraph);
 
 
                 ArrayList<BarEntry> barEntries = new ArrayList<>();
 
-                barEntries.add(new BarEntry(barTemp1, 0));
-                barEntries.add(new BarEntry(barTemp2, 1));
-                barEntries.add(new BarEntry(barTemp3, 2));
-                barEntries.add(new BarEntry(29f, 3));
-                barEntries.add(new BarEntry(15f, 4));
-                barEntries.add(new BarEntry(22f, 5));
-                barEntries.add(new BarEntry(20f, 6));
-                barEntries.add(new BarEntry(23f, 7));
-                barEntries.add(new BarEntry(16f, 8));
-                barEntries.add(new BarEntry(29f, 9));
-
-//                barEntries.add(new BarEntry(259f, 7));
-//                barEntries.add(new BarEntry(259f, 8));
-//                barEntries.add(new BarEntry(259f, 9));
-//                barEntries.add(new BarEntry(259f, 10));
-                BarDataSet barDataSet = new BarDataSet(barEntries, "Temp Values");
+                barEntries.add(new BarEntry(barLight1, 0));
+                barEntries.add(new BarEntry(barLight2, 1));
+                barEntries.add(new BarEntry(barLight3, 2));
+                barEntries.add(new BarEntry(371f, 3));
+                barEntries.add(new BarEntry(389f, 5));
+                barEntries.add(new BarEntry(395f, 6));
+                barEntries.add(new BarEntry(409f, 7));
+                barEntries.add(new BarEntry(409f, 8));
+                barEntries.add(new BarEntry(409f, 9));
+                barEntries.add(new BarEntry(409f, 10));
+                BarDataSet barDataSet = new BarDataSet(barEntries, "Light Values");
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
 
-                ArrayList<String> theTemp = new ArrayList<>();
-                theTemp.add("11:00");
-                theTemp.add("12:00");
-                theTemp.add("1:00");
-                theTemp.add("2:00");
-                theTemp.add("3:00");
-                theTemp.add("4:00");
-                theTemp.add("5:00");
-                theTemp.add("6:00");
-                theTemp.add("7:00");
-                theTemp.add("8:00");
+                ArrayList<String> theLight = new ArrayList<>();
+                theLight.add("11:00");
+                theLight.add("12:00");
+                theLight.add("1:00");
+                theLight.add("2:00");
+                theLight.add("3:00");
+                theLight.add("4:00");
+                theLight.add("5:00");
+                theLight.add("6:00");
+                theLight.add("7:00");
+                theLight.add("8:00");
 
 
-                BarData theData = new BarData(theTemp, barDataSet);
+                BarData theData = new BarData(theLight, barDataSet);
                 barChart.setData(theData);
                 barChart.setTouchEnabled(false);
                 //barChart.getDescription().setEnabled(false);
 
             }
+
 
 
             @Override

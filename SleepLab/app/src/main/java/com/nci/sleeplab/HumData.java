@@ -19,22 +19,21 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class RoomTempData extends AppCompatActivity {
+public class HumData extends AppCompatActivity {
 
+    BarChart barChart;
     private int mYear;
     private int mMonth;
     private Integer mDay;
     private String curMonth;
     private TextView myDateView;
     private TextView myMonthView;
-    private static final String TAG = "Temp";
-
-    BarChart barChart;
+    private static final String TAG = "Hum";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_temp_data);
+        setContentView(R.layout.activity_hum_data);
 
 
         myDateView = (TextView) findViewById(R.id.dateView);
@@ -75,60 +74,59 @@ public class RoomTempData extends AppCompatActivity {
         myDateView.setText(Integer.toString(mDay));
         myMonthView.setText((curMonth));
 
+
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRefTemp = database.getReference("TempValues");
+        DatabaseReference myRefSound = database.getReference("HumValues");
 
-        myRefTemp.addValueEventListener(new ValueEventListener() {
+        myRefSound.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                final Integer barTemp1= dataSnapshot.child("Temp/Temp1").getValue(Integer.class);
-                final Integer barTemp2= dataSnapshot.child("Temp/Temp2").getValue(Integer.class);
-                final Integer barTemp3= dataSnapshot.child("Temp/Temp3").getValue(Integer.class);
+                final Integer barHum1= dataSnapshot.child("Hum/Hum1").getValue(Integer.class);
+                final Integer barHum2= dataSnapshot.child("Hum/Hum2").getValue(Integer.class);
+                final Integer barHum3= dataSnapshot.child("Hum/Hum3").getValue(Integer.class);
                 barChart = (BarChart) findViewById(R.id.bargraph);
 
 
                 ArrayList<BarEntry> barEntries = new ArrayList<>();
 
-                barEntries.add(new BarEntry(barTemp1, 0));
-                barEntries.add(new BarEntry(barTemp2, 1));
-                barEntries.add(new BarEntry(barTemp3, 2));
-                barEntries.add(new BarEntry(29f, 3));
-                barEntries.add(new BarEntry(15f, 4));
-                barEntries.add(new BarEntry(22f, 5));
-                barEntries.add(new BarEntry(20f, 6));
-                barEntries.add(new BarEntry(23f, 7));
-                barEntries.add(new BarEntry(16f, 8));
-                barEntries.add(new BarEntry(29f, 9));
+                barEntries.add(new BarEntry(barHum1, 0));
+                barEntries.add(new BarEntry(barHum2, 1));
+                barEntries.add(new BarEntry(barHum3, 2));
+                barEntries.add(new BarEntry(30f, 3));
+                barEntries.add(new BarEntry(30f, 4));
+                barEntries.add(new BarEntry(23f, 5));
+                barEntries.add(new BarEntry(12f, 6));
+               // barEntries.add(new BarEntry(409f, 7));
+               // barEntries.add(new BarEntry(409f, 8));
+               // barEntries.add(new BarEntry(409f, 9));
+               //barEntries.add(new BarEntry(409f, 10));
 
-//                barEntries.add(new BarEntry(259f, 7));
-//                barEntries.add(new BarEntry(259f, 8));
-//                barEntries.add(new BarEntry(259f, 9));
-//                barEntries.add(new BarEntry(259f, 10));
-                BarDataSet barDataSet = new BarDataSet(barEntries, "Temp Values");
+                BarDataSet barDataSet = new BarDataSet(barEntries, "Humidity Values");
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
 
-                ArrayList<String> theTemp = new ArrayList<>();
-                theTemp.add("11:00");
-                theTemp.add("12:00");
-                theTemp.add("1:00");
-                theTemp.add("2:00");
-                theTemp.add("3:00");
-                theTemp.add("4:00");
-                theTemp.add("5:00");
-                theTemp.add("6:00");
-                theTemp.add("7:00");
-                theTemp.add("8:00");
+                ArrayList<String> theHum= new ArrayList<>();
+                theHum.add("11:00");
+                theHum.add("12:00");
+                theHum.add("1:00");
+                theHum.add("2:00");
+                theHum.add("3:00");
+                theHum.add("4:00");
+               // theHum.add("5:00");
+               // theHum.add("6:00");
+               // theHum.add("7:00");
+               // theHum.add("8:00");
 
-
-                BarData theData = new BarData(theTemp, barDataSet);
+                //specifications for graphs
+                BarData theData = new BarData(theHum, barDataSet);
                 barChart.setData(theData);
                 barChart.setTouchEnabled(false);
-                //barChart.getDescription().setEnabled(false);
+
 
             }
+
 
 
             @Override

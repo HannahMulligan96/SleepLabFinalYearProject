@@ -2,32 +2,34 @@ package com.nci.sleeplab;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class User extends AppCompatActivity {
 
-    private TextView textViewUserEmail;
+    private Button subtract;
+    private EditText bedField;
+    private EditText sleepField;
+    private TextView answerField;
+    private static final String TAG = "UserData";
 
-    //firebase authentication
-    private FirebaseAuth firebaseAuth;
 
+    ListView listv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analyze);
-
-
-//        if (firebaseAuth.getCurrentUser() == null) {
-//            finish();
-//            startActivity(new Intent(getApplicationContext(), LoginActivity.class));
-//        }
-//
-//        FirebaseUser user = firebaseAuth.getCurrentUser();
-//        textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
-//        textViewUserEmail.setText("welcome  " + user.getEmail());
-
 
 
     }

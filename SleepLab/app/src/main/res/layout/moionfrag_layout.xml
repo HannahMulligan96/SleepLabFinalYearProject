@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="89dp">
+
+
+    <TextView
+        android:id="@+id/time11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="11:00"
+        android:textColor="#594A42"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!--<TextView-->
+    <!--android:id="@+id/time8"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="50dp"-->
+    <!--android:text="12:00"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/time11"-->
+    <!--tools:layout_editor_absoluteY="136dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time9"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="59dp"-->
+    <!--android:text="01:00"-->
+    <!--app:layout_constraintStart_toEndOf="@+id/time8"-->
+    <!--tools:layout_editor_absoluteY="136dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time10"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginStart="16dp"-->
+    <!--android:text="02:00"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--tools:layout_editor_absoluteY="370dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time12"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="03:00"-->
+    <!--app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--tools:layout_editor_absoluteX="44dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time13"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="04:00"-->
+    <!--tools:layout_editor_absoluteX="446dp"-->
+    <!--tools:layout_editor_absoluteY="136dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time14"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="05:00"-->
+    <!--tools:layout_editor_absoluteX="446dp"-->
+    <!--tools:layout_editor_absoluteY="168dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time16"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="06:00"-->
+    <!--tools:layout_editor_absoluteX="446dp"-->
+    <!--tools:layout_editor_absoluteY="194dp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/time17"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="07:00"-->
+    <!--tools:layout_editor_absoluteX="446dp"-->
+    <!--tools:layout_editor_absoluteY="234dp" />-->
+
+    <TextView
+        android:id="@+id/time2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="180dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="12:00"
+        android:textColor="#594A42"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/awakeBetween"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginEnd="180dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="You were awake between.."
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <TextView
+        android:id="@+id/fact"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Did You know that the average motion.."
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.248"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.842" />
+
+    <TextView
+        android:id="@+id/fbBed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="76dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="11:45"
+        android:textColor="#594A42"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fbSleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="176dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="12:36"
+        android:textColor="#594A42"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="448dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/test2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="504dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="584dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</android.support.constraint.ConstraintLayout>

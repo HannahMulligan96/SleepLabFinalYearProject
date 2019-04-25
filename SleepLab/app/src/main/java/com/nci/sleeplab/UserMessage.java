@@ -20,11 +20,11 @@ public class UserMessage extends AppCompatActivity {
         buttonAdd = (Button) findViewById(R.id.addButton);
         buttonBack = (Button) findViewById(R.id.backButton);
 
-        //Data  activity
+        //Buttons on click
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getBaseContext(), userdata.class);
+                Intent myIntent = new Intent(getBaseContext(), Log.class);
                 startActivity(myIntent);
             }
 
@@ -34,7 +34,7 @@ public class UserMessage extends AppCompatActivity {
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getBaseContext(), Log.class);
+                Intent myIntent = new Intent(getBaseContext(), Profile.class);
                 startActivity(myIntent);
             }
 

@@ -85,18 +85,18 @@ public class Profile extends AppCompatActivity {
         AnalyzeView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getBaseContext(), User.class);
+                Intent myIntent = new Intent(getBaseContext(), AnalyzeMessage.class);
                 startActivity(myIntent);
             }
 
 
         });
 
-        //Diary activity
+        //Log the data activity
         diaryView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getBaseContext(), Log.class);
+                Intent myIntent = new Intent(getBaseContext(), UserMessage.class);
                 startActivity(myIntent);
             }
 
@@ -105,7 +105,6 @@ public class Profile extends AppCompatActivity {
 
 
     }
-
 
     //Menu in action bar
     @Override
