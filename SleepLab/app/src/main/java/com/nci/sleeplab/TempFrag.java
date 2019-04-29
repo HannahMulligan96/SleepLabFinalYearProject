@@ -15,9 +15,13 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Calendar;
 
 
 public class TempFrag extends Fragment {
+
+
+    private String climate;
 
     @Nullable
 
@@ -39,7 +43,6 @@ public class TempFrag extends Fragment {
     }
 
 
-
     ValueEventListener valueEventListener = new ValueEventListener() {
 
         @Override
@@ -55,19 +58,67 @@ public class TempFrag extends Fragment {
             TextView myText4 = (TextView) getView().findViewById(R.id.testingTemp5);
             myText4.setText(dataSnapshot.child("Temp/Temp5").getValue().toString());
             TextView myText5 = (TextView) getView().findViewById(R.id.testingTemp6);
-            myText5.setText(dataSnapshot.child("Temp/Temp1").getValue().toString());
+            myText5.setText(dataSnapshot.child("Temp/Temp6").getValue().toString());
             TextView myText6 = (TextView) getView().findViewById(R.id.testingTemp7);
-            myText6.setText(dataSnapshot.child("Temp/Temp2").getValue().toString());
+            myText6.setText(dataSnapshot.child("Temp/Temp7").getValue().toString());
             TextView myText7 = (TextView) getView().findViewById(R.id.testingTemp8);
-            myText7.setText(dataSnapshot.child("Temp/Temp3").getValue().toString());
+            myText7.setText(dataSnapshot.child("Temp/Temp8").getValue().toString());
             TextView myText8 = (TextView) getView().findViewById(R.id.testingTemp9);
-            myText8.setText(dataSnapshot.child("Temp/Temp4").getValue().toString());
+            myText8.setText(dataSnapshot.child("Temp/Temp9").getValue().toString());
             TextView myText9 = (TextView) getView().findViewById(R.id.testingTemp10);
-            myText9.setText(dataSnapshot.child("Temp/Temp5").getValue().toString());
+            myText9.setText(dataSnapshot.child("Temp/Temp10").getValue().toString());
+
+//Calculating the average temp of the night
+            String one = myText.getText().toString();
+            String two = myText1.getText().toString();
+            String three = myText2.getText().toString();
+            String four = myText3.getText().toString();
+            String five = myText4.getText().toString();
+            String six = myText5.getText().toString();
+            String seven = myText6.getText().toString();
+            String eight = myText7.getText().toString();
+            String nine = myText8.getText().toString();
+            String ten = myText9.getText().toString();
 
 
-        }
+            int num1 = Integer.parseInt(one);
+            int num2 = Integer.parseInt(two);
+            int num3 = Integer.parseInt(three);
+            int num4 = Integer.parseInt(four);
+            int num5 = Integer.parseInt(five);
+            int num6 = Integer.parseInt(six);
+            int num7 = Integer.parseInt(seven);
+            int num8 = Integer.parseInt(eight);
+            int num9 = Integer.parseInt(nine);
+            int num10 = Integer.parseInt(ten);
+            int calculate = num1 + num2 + num3 + num4 + num5 + num6 + num7 + num8 + num9 + num10;
 
+            int result = calculate / 10;
+
+            TextView testingResult = (TextView) getView().findViewById(R.id.testingResult);
+
+            testingResult.setText(" " + result);
+
+           int max = 20;
+           int min =14;
+
+
+            if (result > 19) {
+                climate = "might be too hot and affecting your sleep cycle";
+            } else if (result < 15) {
+                climate = "might be too cold and affecting your sleep cycle";
+            } else if (result<max ) {
+                climate = "is the recommended temperature";
+            } else if (result>min ) {
+                climate = "is the recommended temperature for sleeping";
+            }
+
+                TextView climateResult = (TextView) getView().findViewById(R.id.climateResult);
+
+                climateResult.setText((climate));
+
+
+            }
 
 
 
@@ -76,8 +127,6 @@ public class TempFrag extends Fragment {
         }
 
     };
-
-
 
 
 }

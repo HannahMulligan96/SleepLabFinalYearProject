@@ -8,301 +8,151 @@
 
 
     <TextView
-        android:id="@+id/time19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="06:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
-
-    <TextView
-        android:id="@+id/time20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="07:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
-
-    <TextView
-        android:id="@+id/time21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="284dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="08:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
-
-    <TextView
-        android:id="@+id/time17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="05:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
-
-    <TextView
-        android:id="@+id/time18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="04:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.288" />
-
-    <TextView
         android:id="@+id/testingTemp"
         android:layout_width="39dp"
+        android:visibility="gone"
         android:layout_height="22dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp6"
+        android:visibility="gone"
         android:layout_width="39dp"
         android:layout_height="22dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp2"
+        android:visibility="gone"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintHorizontal_bias="0.258"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp7"
+        android:visibility="gone"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.323"
+        app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp3"
+        android:visibility="gone"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp8"
+        android:visibility="gone"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp4"
+        android:visibility="gone"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintHorizontal_bias="0.593"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp9"
+        android:visibility="gone"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="124dp"
         android:layout_marginEnd="8dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.778"
+        app:layout_constraintHorizontal_bias="0.566"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp5"
+        android:visibility="gone"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/testingTemp10"
+        android:visibility="gone"
         android:layout_width="43dp"
         android:layout_height="19dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="116dp"
         android:layout_marginEnd="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/time13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="12:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/time14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="01:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/time15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="02:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/time16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="284dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="03:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/time6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="176dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="11:00"
-        android:textColor="#594A42"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/fbBed2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="244dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="248dp"
+        android:layout_marginTop="72dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="11:45"
         android:textColor="#594A42"
@@ -314,8 +164,8 @@
         android:id="@+id/fbSleep2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="212dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="208dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="12:36"
         android:textColor="#594A42"
@@ -341,13 +191,14 @@
         app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/awakeBetween3"
-        app:layout_constraintVertical_bias="0.053" />
+        app:layout_constraintVertical_bias="0.066" />
 
     <TextView
         android:id="@+id/awakeBetween3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="180dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="You were awake between"
@@ -355,27 +206,9 @@
         android:textColor="#594A42"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/awakeBetween4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="205dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="180dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="sans-serif-smallcaps"
-        android:text="Last nights temp readings"
-        android:textAlignment="center"
-        android:textColor="#594A42"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/awakeBetween5"
@@ -395,8 +228,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/climateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="The temperature of your room"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.707" />
+        app:layout_constraintVertical_bias="0.663" />
+
+    <TextView
+        android:id="@+id/climateResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginEnd="180dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.732" />
 
     <TextView
         android:id="@+id/awakeBetween6"
@@ -407,29 +276,36 @@
         android:layout_marginEnd="180dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Your average was.."
+        android:text="Your average room temperature
+        from last night was"
         android:textAlignment="center"
         android:textColor="#594A42"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.828" />
+        app:layout_constraintVertical_bias="0.261" />
 
-    <View
-        android:id="@+id/divider5"
-        android:layout_width="368dp"
-        android:layout_height="6dp"
+    <TextView
+        android:id="@+id/testResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="180dp"
         android:layout_marginBottom="8dp"
-        android:background="?android:attr/listDivider"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.635" />
+        app:layout_constraintVertical_bias="0.951" />
 
     <View
         android:id="@+id/divider6"
@@ -442,7 +318,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.101" />
+        app:layout_constraintVertical_bias="0.194" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="368dp"
+        android:layout_height="7dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.424" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -452,5 +342,30 @@
         android:src="@drawable/temp2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/testingResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="44dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4" />
+
+    <!--<TextView-->
+        <!--android:id="@+id/climateResult"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginBottom="76dp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent" />-->
 
 </android.support.constraint.ConstraintLayout>
