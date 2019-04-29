@@ -7,6 +7,22 @@
     android:layout_height="match_parent">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="69dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="408dp"
+        android:src="@drawable/temp2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
+
     <TextView
         android:id="@+id/testingTemp"
         android:layout_width="39dp"
@@ -148,28 +164,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/fbBed2"
+        android:id="@+id/tempBed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="248dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="148dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="11:45"
-        android:textColor="#594A42"
+        android:text="TextView"
+        android:textColor="#9FB543"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/fbSleep2"
+        android:id="@+id/tempSleep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="208dp"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="96dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="12:36"
-        android:textColor="#594A42"
+        android:text="TextView"
+        android:textAllCaps="false"
+        android:textColor="#9FB543"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -188,17 +207,17 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintHorizontal_bias="0.593"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/awakeBetween3"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.09" />
 
     <TextView
         android:id="@+id/awakeBetween3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="104dp"
         android:layout_marginEnd="180dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="You were awake between"
@@ -206,29 +225,30 @@
         android:textColor="#594A42"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/awakeBetween5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_marginStart="205dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="180dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="The recommended room temp is between
-        15 and 19 degrees"
+        android:text="The recommended room temp is
+                      between 15 and 19 degrees"
         android:textAlignment="center"
         android:textColor="#594A42"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintHorizontal_bias="0.535"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686" />
 
     <TextView
         android:id="@+id/climateText"
@@ -245,27 +265,26 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.557"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.663" />
+        app:layout_constraintVertical_bias="0.789" />
 
     <TextView
         android:id="@+id/climateResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="205dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="48dp"
         android:fontFamily="sans-serif-smallcaps"
+        android:text="TextView"
         android:textAlignment="center"
-        android:textColor="#594A42"
+        android:textColor="#9FB543"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.732" />
+        app:layout_constraintVertical_bias="0.864" />
 
     <TextView
         android:id="@+id/awakeBetween6"
@@ -286,26 +305,26 @@
         app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.261" />
+        app:layout_constraintVertical_bias="0.421" />
 
     <TextView
         android:id="@+id/testResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="205dp"
+        android:layout_marginStart="216dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="180dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-smallcaps"
         android:textAlignment="center"
-        android:textColor="#594A42"
+        android:textColor="#9FB543"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.951" />
+        app:layout_constraintVertical_bias="0.897" />
 
     <View
         android:id="@+id/divider6"
@@ -316,9 +335,10 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintVertical_bias="0.348" />
 
     <View
         android:id="@+id/divider"
@@ -332,16 +352,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.424" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="64dp"
-        android:src="@drawable/temp2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintVertical_bias="0.59" />
 
     <TextView
         android:id="@+id/testingResult"
@@ -352,12 +363,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="44dp"
         android:text="TextView"
+        android:textColor="#9FB543"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintVertical_bias="0.572" />
 
     <!--<TextView-->
         <!--android:id="@+id/climateResult"-->

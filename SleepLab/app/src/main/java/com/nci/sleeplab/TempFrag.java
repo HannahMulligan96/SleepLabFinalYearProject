@@ -14,7 +14,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import java.util.Date;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 
@@ -32,6 +34,7 @@ public class TempFrag extends Fragment {
         View view = inflater.inflate(R.layout.tempfrag_layout, container, false);
         //Calling to get data
         getData();
+        getData2();
         return view;
     }
 
@@ -99,27 +102,28 @@ public class TempFrag extends Fragment {
 
             testingResult.setText(" " + result);
 
-           int max = 20;
-           int min =14;
+            int max = 20;
+            int min = 14;
 
 
             if (result > 19) {
                 climate = "might be too hot and affecting your sleep cycle";
             } else if (result < 15) {
                 climate = "might be too cold and affecting your sleep cycle";
-            } else if (result<max ) {
+            } else if (result < max) {
                 climate = "is the recommended temperature";
-            } else if (result>min ) {
+            } else if (result > min) {
                 climate = "is the recommended temperature for sleeping";
             }
 
-                TextView climateResult = (TextView) getView().findViewById(R.id.climateResult);
+            TextView climateResult = (TextView) getView().findViewById(R.id.climateResult);
 
-                climateResult.setText((climate));
+            climateResult.setText((climate));
 
 
-            }
 
+
+        }
 
 
         @Override
@@ -128,8 +132,63 @@ public class TempFrag extends Fragment {
 
     };
 
+    private void getData2() {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef1 = database.getReference("UserData");
+        myRef1.addValueEventListener(valueEventListener2);
 
+    }
+
+
+    ValueEventListener valueEventListener2 = new ValueEventListener() {
+
+        @Override
+        public void onDataChange(DataSnapshot dataSnapshot) {
+            TextView myTexts = (TextView) getView().findViewById(R.id.tempBed);
+            myTexts.setText(dataSnapshot.child("Data/BedTime").getValue().toString());
+            TextView myTexts1 = (TextView) getView().findViewById(R.id.tempSleep);
+            myTexts1.setText(dataSnapshot.child("Data/SleepTime").getValue().toString());
+
+//
+//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
+//
+//            String bed = myTexts.getText().toString();
+//            int tempBed ;
+//            String sleep = myTexts1.getText().toString();
+//            int tempSleep;
+//
+//            long difference = tempBed.getTime() - tempSleep.getTime();
+//            days = (int) (difference / (1000*60*60*24));
+//            hours = (int) ((difference - (1000*60*60*24*days)) / (1000*60*60));
+//            min = (int) (difference - (1000*60*60*24*days) - (1000*60*60*hours)) / (1000*60);
+//            hours = (hours < 0 ? -hours : hours);
+//            Log.i("======= Hours"," :: "+hours);
+//
+
+
+//            java.text.DateFormat df = new java.text.SimpleDateFormat("hh:mm");
+//            String bed = myTexts.getText().toString();
+//           // java.util.Date tempBed = df.parse();
+//            int tempBed = Integer.parseInt(bed);
+//            String sleep = myTexts1.getText().toString();
+//            int tempSleep= Integer.parseInt(sleep);
+//            long diff = tempBed.getTime() - tempSleep.getTime();
+//
+
+//            java.text.DateFormat df = new java.text.SimpleDateFormat("hh:mm:ss");
+//            java.util.Date date1 = df.parse("18:40:10");
+//            java.util.Date date2 = df.parse("19:05:15");
+//            long diff = date2.getTime() - date1.getTime();
+        }
+
+
+        @Override
+        public void onCancelled(DatabaseError error) {
+        }
+
+    };
 }
+
 
 
 

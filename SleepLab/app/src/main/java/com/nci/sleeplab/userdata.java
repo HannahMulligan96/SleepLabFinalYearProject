@@ -1,6 +1,7 @@
 package com.nci.sleeplab;
 
 import android.app.TimePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
@@ -17,7 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
-public class userdata extends AppCompatActivity implements TimePickerDialog.OnTimeSetListener {
+public class userdata extends AppCompatActivity  {
 
 
     private TextView myDateView;
@@ -30,43 +31,66 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
     private Integer mDay;
     private String curMonth;
     private Button myButton;
+    private Button myButton2;
 
+    TextView mTimeTextView;
+    Button mtime;
 
+    TextView mTime2TextView;
+    Button mtime2;
+
+    Context mContext = this;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_data);
 
 
-        //Time picker widget on click listener for button
-        Button button = (Button) findViewById(R.id.selectBtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        mTimeTextView =(TextView) findViewById(R.id.bedTime);
+        Calendar calendar =Calendar.getInstance();
+        final int hour =calendar.get(Calendar.HOUR_OF_DAY);
+        final int minute =calendar.get(Calendar.MINUTE);
+
+        mtime = (Button) findViewById(R.id.bedButton);
+
+        mtime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                DialogFragment timePicker1 = new TimePickerFragment();
-                timePicker1.show(getSupportFragmentManager(), "time picker1");
-
-
+                TimePickerDialog timePickerDialog = new TimePickerDialog(mContext, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        mTimeTextView.setText(hourOfDay + ":" + minute);
+                    }
+                },hour, minute,android.text.format.DateFormat.is24HourFormat(mContext));
+                timePickerDialog.show();
 
             }
         });
 
-        //Time picker widget on click listener for button
-        Button button1 = (Button) findViewById(R.id.selectBtn2);
-        button1.setOnClickListener(new View.OnClickListener() {
+        mTime2TextView =(TextView) findViewById(R.id.sleepTime);
+        Calendar calendar2 =Calendar.getInstance();
+        final int hour2 =calendar2.get(Calendar.HOUR_OF_DAY);
+        final int minute2 =calendar2.get(Calendar.MINUTE);
+
+        mtime2 = (Button) findViewById(R.id.sleepButton);
+
+        mtime2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                DialogFragment timePicker2 = new TimePickerFragmentTwo();
-                timePicker2.show(getSupportFragmentManager(), "time picker2");
+                TimePickerDialog timePickerDialog = new TimePickerDialog(mContext, new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        mTime2TextView.setText(hourOfDay + ":" + minute);
+                    }
+                },hour2, minute2,android.text.format.DateFormat.is24HourFormat(mContext));
+                timePickerDialog.show();
 
             }
         });
 
 
-        //Sending user dat to firebase save button
-        myButton = (Button) findViewById(R.id.saveButton);
+        //Sending user data to firebase save button
+        myButton = (Button) findViewById(R.id.logButton);
         myButton.setOnClickListener(new View.OnClickListener() {
 
             final EditText myText1 = findViewById(R.id.sleepHours);
@@ -76,20 +100,24 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
             @Override
             public void onClick(View v) {
                 FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRefHours = database.getReference().child("UserData").child("HoursSlept");
-                DatabaseReference myRefBed = database.getReference().child("UserData").child("BedTime");
-                DatabaseReference myRefSleep = database.getReference().child("UserData").child("SleepTime");
+                DatabaseReference myRefHours = database.getReference().child("UserData").child("/Data/HoursSlept");
+                DatabaseReference myRefBed = database.getReference().child("UserData").child("Data/BedTime");
+                DatabaseReference myRefSleep = database.getReference().child("UserData").child("Data/SleepTime");
                 myRefHours.setValue(myText1.getText().toString().trim());
                 myRefBed.setValue(myText2.getText().toString().trim());
                 myRefSleep.setValue(myText3.getText().toString().trim());
             }
+
+
+
+
         });
 
-
-        myButton.setOnClickListener(new View.OnClickListener() {
+        myButton2 = (Button) findViewById(R.id.saveButton);
+        myButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(getBaseContext(), Log.class);
+                Intent myIntent = new Intent(getBaseContext(), Profile.class);
                 startActivity(myIntent);
             }
 
@@ -142,15 +170,9 @@ public class userdata extends AppCompatActivity implements TimePickerDialog.OnTi
     }
 
 
-    //Setting the time selected by the user to the views
-    @Override
-    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
 
-//        mysleepTime.setText("" + hourOfDay + ":" + minute);
-        mysleepTime.setText("Test" );
-        myBedTime.setText("test2");
-//        myBedTime.setText("" + hourOfDay + ":" + minute);
-    }
+
+    //Setting the time selected by the user to the views
 
 
 

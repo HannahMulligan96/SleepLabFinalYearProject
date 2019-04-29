@@ -2,253 +2,286 @@
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<TextView-->
-        <!--android:id="@+id/fact2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="28dp"-->
-        <!--android:layout_marginStart="25dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="Did You know that the average motion.."-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="18sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.813" />-->
 
-    <!--<TextView-->
-        <!--android:id="@+id/time27"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="36dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="11:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.288" />-->
+    <TextView
+        android:id="@+id/awakeBetween12"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="The recommended room humidity is
+                      between 15 and 19 degrees"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.686" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time28"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="96dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="12:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.288" />-->
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="368dp"
+        android:layout_height="7dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time29"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="164dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="01:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.288" />-->
+    <TextView
+        android:id="@+id/humAvg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="44dp"
+        android:text="TextView"
+        android:textColor="#9FB543"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time30"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="232dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="01:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.288" />-->
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="368dp"
+        android:layout_height="7dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.348" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time31"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="284dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="02:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.288" />-->
+    <TextView
+        android:id="@+id/awakeBetween11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Your average humidity
+        from last night was"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.421" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/test5"-->
-        <!--android:layout_width="43dp"-->
-        <!--android:layout_height="19dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="216dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:text="TextView"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.184"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/humBed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="148dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="TextView"
+        android:textColor="#9FB543"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/test6"-->
-        <!--android:layout_width="39dp"-->
-        <!--android:layout_height="22dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="216dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:text="TextView"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.066"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/awakeBetween7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="340dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="and"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/awakeBetween3"
+        app:layout_constraintVertical_bias="0.09" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time22"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="40dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="11:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.0" />-->
+    <TextView
+        android:id="@+id/humSleep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="96dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="TextView"
+        android:textAllCaps="false"
+        android:textColor="#9FB543"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time23"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="96dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="12:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.0" />-->
+    <TextView
+        android:id="@+id/awakeBetween4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="180dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="You were awake between"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time24"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="164dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="01:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.0" />-->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="69dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="408dp"
+        android:src="@drawable/temp2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.275" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time25"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="232dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="01:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.0" />-->
+    <TextView
+        android:id="@+id/climateResult3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#9FB543"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.864" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/time26"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="284dp"-->
-        <!--android:layout_marginTop="176dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="02:00"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-        <!--app:layout_constraintVertical_bias="0.0" />-->
+    <TextView
+        android:id="@+id/testingHum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/fbSleep3"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="40dp"-->
-        <!--android:layout_marginEnd="176dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="12:36"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/testingHum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/awakeBetween3"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="205dp"-->
-        <!--android:layout_marginEnd="180dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="You were awake between.."-->
-        <!--android:textAlignment="center"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="18sp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent" />-->
+    <TextView
+        android:id="@+id/testingHum3"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
 
-    <!--<TextView-->
-        <!--android:id="@+id/fbBed3"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="196dp"-->
-        <!--android:layout_marginTop="40dp"-->
-        <!--android:fontFamily="sans-serif-smallcaps"-->
-        <!--android:text="11:45"-->
-        <!--android:textColor="#594A42"-->
-        <!--android:textSize="16sp"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
+    <TextView
+        android:id="@+id/testingHum4"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/testingHum5"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/testingHum6"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/testingHum7"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/testingHum8"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/testingHum9"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <TextView
+        android:id="@+id/testingHum10"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="46dp" />
 </android.support.constraint.ConstraintLayout>
 
 
