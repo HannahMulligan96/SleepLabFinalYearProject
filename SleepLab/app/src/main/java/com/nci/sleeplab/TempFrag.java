@@ -23,33 +23,33 @@ import java.util.Calendar;
 public class TempFrag extends Fragment {
 
 
-    private String climate;
 
-    @Nullable
+        private String climate;
 
-    @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
-                             @Nullable Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.tempfrag_layout, container, false);
-        //Calling to get data
-        getData();
-        getData2();
-        return view;
-    }
-
-    private void getData() {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("TempValues");
-        myRef.addValueEventListener(valueEventListener);
-
-    }
-
-
-    ValueEventListener valueEventListener = new ValueEventListener() {
+        @Nullable
 
         @Override
-        public void onDataChange(DataSnapshot dataSnapshot) {
+        public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
+                                 @Nullable Bundle savedInstanceState) {
+            // Inflate the layout for this fragment
+            View view = inflater.inflate(R.layout.tempfrag_layout, container, false);
+            //Calling to get data
+            getData();
+            getData2();
+            return view;
+        }
+
+        private void getData() {
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference("TempValues");
+            myRef.addValueEventListener(valueEventListener);
+
+        }
+
+
+        ValueEventListener valueEventListener = new ValueEventListener() {
+
+            @Override public void onDataChange(DataSnapshot dataSnapshot) {
             TextView myText = (TextView) getView().findViewById(R.id.testingTemp);
             myText.setText(dataSnapshot.child("Temp/Temp1").getValue().toString());
             TextView myText1 = (TextView) getView().findViewById(R.id.testingTemp2);

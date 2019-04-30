@@ -96,16 +96,16 @@ public class HumFrag extends Fragment {
             testingResultHum.setText(" " + result);
 
 
-            int max = 20;
-            int min = 14;
+            int max = 30;
+            int min = 50;
 
 
-            if (result > 19) {
+            if (result > 30) {
                 climateHum = "might be too humid and affecting your sleep cycle";
-            } else if (result < 15) {
+            } else if (result < 30) {
                 climateHum = "might not be humid enough and affecting your sleep cycle";
             } else if (result < max) {
-                climateHum = "is the recommended temperature";
+                climateHum = "is the recommended humidity for sleeping";
             } else if (result > min) {
                 climateHum = "is the recommended humidity for sleeping";
             }

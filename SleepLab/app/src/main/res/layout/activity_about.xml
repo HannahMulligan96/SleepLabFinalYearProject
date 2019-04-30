@@ -6,4 +6,105 @@
     android:layout_height="match_parent"
     tools:context=".about">
 
+
+
+    <TextView
+        android:id="@+id/textViewTitle5"
+        android:layout_width="326dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="164dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Sleep Lab is a system to monitor the users sleeping environment it measures Light, Sound, Motion, Humidity and Temperature levels.  "
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/textViewTitle8"
+        android:layout_width="326dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="164dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="There are 3 sections within this application Log, Data and Analyze."
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.628" />
+
+    <TextView
+        android:id="@+id/textViewTitle9"
+        android:layout_width="326dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="52dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Analyze allows the user to compare the collected data against logged data and make assumptions about their sleep. "
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitle10"
+        android:layout_width="326dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="220dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="The log section allows the user to manually log their sleep data."
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitle12"
+        android:layout_width="326dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="100dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="The data section allows the user to view the collected sensor data from their sleeping environment in the form of graphs"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="149dp"
+        android:layout_height="62dp"
+        android:src="@drawable/sleeplab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </ImageView>
+
 </android.support.constraint.ConstraintLayout>

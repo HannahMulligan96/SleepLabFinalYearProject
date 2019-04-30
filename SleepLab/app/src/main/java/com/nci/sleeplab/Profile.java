@@ -118,12 +118,14 @@ public class Profile extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.settings:
-                Intent intent = new Intent(this, settings.class);
+            case R.id.about:
+                Intent intent = new Intent(this, about.class);
                 this.startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 
 }
 

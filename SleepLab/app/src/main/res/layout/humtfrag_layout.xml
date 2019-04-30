@@ -8,6 +8,27 @@
 
 
     <TextView
+        android:id="@+id/climateHum"
+        android:layout_width="261dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="205dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="The humidity level in your
+         sleep environment"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.789" />
+
+    <TextView
         android:id="@+id/awakeBetween12"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
@@ -17,7 +38,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="The recommended room humidity is
-                      between 15 and 19 degrees"
+                      between 30 and 50 %"
         android:textAlignment="center"
         android:textColor="#594A42"
         android:textSize="18sp"
@@ -50,7 +71,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="44dp"
-        android:text="TextView"
+        android:hint="avg"
         android:textColor="#9FB543"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -76,7 +97,7 @@
 
     <TextView
         android:id="@+id/awakeBetween11"
-        android:layout_width="wrap_content"
+        android:layout_width="238dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="205dp"
         android:layout_marginTop="8dp"
@@ -99,10 +120,10 @@
         android:id="@+id/humBed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
+        android:layout_marginStart="96dp"
         android:layout_marginTop="148dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="TextView"
+        android:hint="level"
         android:textColor="#9FB543"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -116,7 +137,7 @@
         android:layout_marginStart="205dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="180dp"
-        android:layout_marginBottom="340dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="and"
         android:textAlignment="center"
@@ -124,19 +145,19 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.843"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/awakeBetween3"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.257" />
 
     <TextView
         android:id="@+id/humSleep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="148dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="104dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="TextView"
+        android:hint="level"
         android:textAllCaps="false"
         android:textColor="#9FB543"
         android:textSize="16sp"
@@ -169,7 +190,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="144dp"
         android:layout_marginBottom="408dp"
-        android:src="@drawable/temp2"
+        android:src="@drawable/hum"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.975"
@@ -179,19 +200,22 @@
 
     <TextView
         android:id="@+id/climateResult3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
+        android:layout_width="130dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="148dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="TextView"
+        android:hint="result"
         android:textAlignment="center"
         android:textColor="#9FB543"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintVertical_bias="0.86" />
 
     <TextView
         android:id="@+id/testingHum"

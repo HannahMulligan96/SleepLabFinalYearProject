@@ -36,9 +36,6 @@
             android:name=".Sound"
             android:label="Sound Sensor readings" />
         <activity
-            android:name=".settings"
-            android:label="settings" />
-        <activity
             android:name=".about"
             android:label="About Sleep Lab" />
         <activity
