@@ -24,7 +24,7 @@ public class Log extends AppCompatActivity {
 
         Date today = new Date();
         Calendar nextYear = Calendar.getInstance();
-        nextYear.add(Calendar.DAY_OF_WEEK, 1); //Calendar set to 1 week in advance
+        nextYear.add(Calendar.DAY_OF_WEEK, 1); //Calendar set to display a month in advance
 
         CalendarPickerView datePicker = findViewById(R.id.calendar);
         datePicker.init(today, nextYear.getTime()).withSelectedDate(today); //todays date
@@ -45,7 +45,7 @@ public class Log extends AppCompatActivity {
 
 
                 Toast.makeText(Log.this, selectedDate, Toast.LENGTH_SHORT).show();
-            }  //Dsiplay todays date
+            }  //Display today's date
 
             @Override
             public void onDateUnselected(Date date) {

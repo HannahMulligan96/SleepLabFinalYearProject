@@ -52,7 +52,7 @@ public class Profile extends AppCompatActivity {
         textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
         textViewUserEmail.setText( user.getEmail());
 
-        //Set onclick to images
+        //Set onclick to images on cardview
         DataView = (ImageView) findViewById(R.id.DataOnClick);
         AnalyzeView = (ImageView) findViewById(R.id.AnalyzeOnClick);
         diaryView = (ImageView) findViewById(R.id.diaryOnClick);
@@ -121,15 +121,16 @@ public class Profile extends AppCompatActivity {
             case R.id.about:
                 Intent intent = new Intent(this, about.class);
                 this.startActivity(intent);
+                return true;
+            case R.id.instructions:
+                Intent intent2 = new Intent(this, instructions.class);
+                this.startActivity(intent2);
+                return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 
 
 
 }
-
-
-
-
-

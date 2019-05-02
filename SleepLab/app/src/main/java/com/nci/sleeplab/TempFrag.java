@@ -22,8 +22,6 @@ import java.util.Calendar;
 
 public class TempFrag extends Fragment {
 
-
-
         private String climate;
 
         @Nullable
@@ -39,6 +37,7 @@ public class TempFrag extends Fragment {
             return view;
         }
 
+        //getting temp values from firebase
         private void getData() {
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("TempValues");
@@ -71,7 +70,7 @@ public class TempFrag extends Fragment {
             TextView myText9 = (TextView) getView().findViewById(R.id.testingTemp10);
             myText9.setText(dataSnapshot.child("Temp/Temp10").getValue().toString());
 
-//Calculating the average temp of the night
+            //Calculating the average temp of the night from the 10 temp values
             String one = myText.getText().toString();
             String two = myText1.getText().toString();
             String three = myText2.getText().toString();
@@ -83,7 +82,7 @@ public class TempFrag extends Fragment {
             String nine = myText8.getText().toString();
             String ten = myText9.getText().toString();
 
-
+            //Parsing the values
             int num1 = Integer.parseInt(one);
             int num2 = Integer.parseInt(two);
             int num3 = Integer.parseInt(three);
@@ -102,10 +101,10 @@ public class TempFrag extends Fragment {
 
             testingResult.setText(" " + result);
 
-            int max = 20;
-            int min = 14;
+            int max = 20; // Recommended max room temp
+            int min = 14; // Recommended min room temp
 
-
+            //Result based on average
             if (result > 19) {
                 climate = "might be too hot and affecting your sleep cycle";
             } else if (result < 15) {
@@ -119,9 +118,6 @@ public class TempFrag extends Fragment {
             TextView climateResult = (TextView) getView().findViewById(R.id.climateResult);
 
             climateResult.setText((climate));
-
-
-
 
         }
 
@@ -149,38 +145,8 @@ public class TempFrag extends Fragment {
             TextView myTexts1 = (TextView) getView().findViewById(R.id.tempSleep);
             myTexts1.setText(dataSnapshot.child("Data/SleepTime").getValue().toString());
 
-//
-//            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm");
-//
-//            String bed = myTexts.getText().toString();
-//            int tempBed ;
-//            String sleep = myTexts1.getText().toString();
-//            int tempSleep;
-//
-//            long difference = tempBed.getTime() - tempSleep.getTime();
-//            days = (int) (difference / (1000*60*60*24));
-//            hours = (int) ((difference - (1000*60*60*24*days)) / (1000*60*60));
-//            min = (int) (difference - (1000*60*60*24*days) - (1000*60*60*hours)) / (1000*60);
-//            hours = (hours < 0 ? -hours : hours);
-//            Log.i("======= Hours"," :: "+hours);
-//
 
-
-//            java.text.DateFormat df = new java.text.SimpleDateFormat("hh:mm");
-//            String bed = myTexts.getText().toString();
-//           // java.util.Date tempBed = df.parse();
-//            int tempBed = Integer.parseInt(bed);
-//            String sleep = myTexts1.getText().toString();
-//            int tempSleep= Integer.parseInt(sleep);
-//            long diff = tempBed.getTime() - tempSleep.getTime();
-//
-
-//            java.text.DateFormat df = new java.text.SimpleDateFormat("hh:mm:ss");
-//            java.util.Date date1 = df.parse("18:40:10");
-//            java.util.Date date2 = df.parse("19:05:15");
-//            long diff = date2.getTime() - date1.getTime();
         }
-
 
         @Override
         public void onCancelled(DatabaseError error) {

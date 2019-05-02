@@ -102,10 +102,7 @@ public class RoomTempData extends AppCompatActivity {
                 barEntries.add(new BarEntry(16f, 8));
                 barEntries.add(new BarEntry(29f, 9));
 
-//                barEntries.add(new BarEntry(259f, 7));
-//                barEntries.add(new BarEntry(259f, 8));
-//                barEntries.add(new BarEntry(259f, 9));
-//                barEntries.add(new BarEntry(259f, 10));
+
                 BarDataSet barDataSet = new BarDataSet(barEntries, "Temp Values");
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});

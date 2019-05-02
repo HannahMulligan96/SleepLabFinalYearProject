@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".instructions">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="149dp"
+        android:layout_height="62dp"
+        android:src="@drawable/sleeplab"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="149dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="336dp"
+        android:src="@drawable/lightimage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="149dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="432dp"
+        android:src="@drawable/tempsensor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="149dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="348dp"
+        android:src="@drawable/motionsensor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="149dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="432dp"
+        android:src="@drawable/soundsensor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="149dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="304dp"
+        android:src="@drawable/grove"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="149dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="380dp"
+        android:src="@drawable/rasppi"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/instructions"
+        android:layout_width="326dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="164dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="In order to use the Sleep Lab system you must have the correct hardware in place. (Seen below)"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/instructions3"
+        android:layout_width="326dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="164dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="When the script is ran the system should run seamlessly in the background while you sleep"
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.615" />
+
+    <TextView
+        android:id="@+id/instructions4"
+        android:layout_width="326dp"
+        android:layout_height="97dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="164dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="The system currently runs from 11:00pm to 08:00am "
+        android:textAlignment="center"
+        android:textColor="#594A42"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.917" />
+
+</android.support.constraint.ConstraintLayout>

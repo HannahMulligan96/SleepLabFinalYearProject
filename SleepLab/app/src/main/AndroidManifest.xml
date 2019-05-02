@@ -68,7 +68,8 @@
         <activity
             android:name=".analysefull"
             android:label="@string/title_activity_analysefull"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".instructions"></activity>
     </application>
 
 </manifest>
