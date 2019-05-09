@@ -57,19 +57,26 @@
         <activity
             android:name=".UserMessage"
             android:label="Sleep Log" />
-        <activity android:name=".LightData" />
+        <activity
+            android:name=".LightData"
+            android:label="Light Sensor readings" />
         <activity android:name=".Motion" />
-        <activity android:name=".MotionData" />
+        <activity android:name=".MotionData"
+            android:label="Motion Sensor readings" />
         <activity
             android:name=".AnalyzeMessage"
             android:label="Analyse " />
-        <activity android:name=".AnalyzeCalendar" />
-        <activity android:name=".HumData" />
+        <activity android:name=".AnalyzeCalendar"
+            android:label="Analyse " />
+        <activity android:name=".HumData"
+            android:label="Humidity Sensor readings" />
         <activity
             android:name=".analysefull"
             android:label="@string/title_activity_analysefull"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".instructions"></activity>
+        <activity android:name="instructions"
+             android:label="Instructions"/>
+
     </application>
 
 </manifest>

@@ -34,46 +34,7 @@ public class RoomTempData extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room_temp_data);
 
-
-        myDateView = (TextView) findViewById(R.id.dateView);
-        myMonthView = (TextView) findViewById(R.id.monthView);
-
-
-        final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-        if (mMonth == 0) {
-            curMonth = "Jan";
-        } else if (mMonth == 1) {
-            curMonth = "February";
-        } else if (mMonth == 2) {
-            curMonth = "March";
-        } else if (mMonth == 3) {
-            curMonth = "April";
-        } else if (mMonth == 4) {
-            curMonth = "May";
-        } else if (mMonth == 5) {
-            curMonth = "June";
-        } else if (mMonth == 6) {
-            curMonth = "July";
-        } else if (mMonth == 7) {
-            curMonth = "August";
-        } else if (mMonth == 8) {
-            curMonth = "September";
-        } else if (mMonth == 9) {
-            curMonth = "October";
-        } else if (mMonth == 10) {
-            curMonth = "November";
-        } else if (mMonth == 11) {
-            curMonth = "December";
-        }
-
-        //Setting day and month
-        myDateView.setText(Integer.toString(mDay));
-        myMonthView.setText((curMonth));
 
         // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -86,7 +47,14 @@ public class RoomTempData extends AppCompatActivity {
                 final Integer barTemp1= dataSnapshot.child("Temp/Temp1").getValue(Integer.class);
                 final Integer barTemp2= dataSnapshot.child("Temp/Temp2").getValue(Integer.class);
                 final Integer barTemp3= dataSnapshot.child("Temp/Temp3").getValue(Integer.class);
-                barChart = (BarChart) findViewById(R.id.bargraph);
+                final Integer barTemp4= dataSnapshot.child("Temp/Temp4").getValue(Integer.class);
+                final Integer barTemp5= dataSnapshot.child("Temp/Temp5").getValue(Integer.class);
+                final Integer barTemp6= dataSnapshot.child("Temp/Temp6").getValue(Integer.class);
+                final Integer barTemp7= dataSnapshot.child("Temp/Temp7").getValue(Integer.class);
+                final Integer barTemp8= dataSnapshot.child("Temp/Temp8").getValue(Integer.class);
+                final Integer barTemp9= dataSnapshot.child("Temp/Temp9").getValue(Integer.class);
+                final Integer barTemp10= dataSnapshot.child("Temp/Temp10").getValue(Integer.class);
+
 
 
                 ArrayList<BarEntry> barEntries = new ArrayList<>();
@@ -94,36 +62,81 @@ public class RoomTempData extends AppCompatActivity {
                 barEntries.add(new BarEntry(barTemp1, 0));
                 barEntries.add(new BarEntry(barTemp2, 1));
                 barEntries.add(new BarEntry(barTemp3, 2));
-                barEntries.add(new BarEntry(29f, 3));
-                barEntries.add(new BarEntry(15f, 4));
-                barEntries.add(new BarEntry(22f, 5));
-                barEntries.add(new BarEntry(20f, 6));
-                barEntries.add(new BarEntry(23f, 7));
-                barEntries.add(new BarEntry(16f, 8));
-                barEntries.add(new BarEntry(29f, 9));
+                barEntries.add(new BarEntry(barTemp4, 3));
+                barEntries.add(new BarEntry(barTemp5, 4));
+                barEntries.add(new BarEntry(barTemp6, 5));
+                barEntries.add(new BarEntry(barTemp7, 6));
+                barEntries.add(new BarEntry(barTemp8, 7));
+                barEntries.add(new BarEntry(barTemp9, 8));
+                barEntries.add(new BarEntry(barTemp10, 9));
 
+                setContentView(R.layout.activity_room_temp_data);
 
-                BarDataSet barDataSet = new BarDataSet(barEntries, "Temp Values");
+                barChart = findViewById(R.id.bargraph);
+
+                barChart.setTouchEnabled(false);
+                barChart.setNoDataText("Loading graph data");
+                BarDataSet barDataSet = new BarDataSet(barEntries, "Temp Values in degrees");
+
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
 
                 ArrayList<String> theTemp = new ArrayList<>();
-                theTemp.add("11:00");
-                theTemp.add("12:00");
-                theTemp.add("1:00");
-                theTemp.add("2:00");
-                theTemp.add("3:00");
-                theTemp.add("4:00");
-                theTemp.add("5:00");
-                theTemp.add("6:00");
-                theTemp.add("7:00");
-                theTemp.add("8:00");
+                theTemp.add("11");
+                theTemp.add("12");
+                theTemp.add("1");
+                theTemp.add("2");
+                theTemp.add("3");
+                theTemp.add("4");
+                theTemp.add("5");
+                theTemp.add("6");
+                theTemp.add("7");
+                theTemp.add("8");
 
 
                 BarData theData = new BarData(theTemp, barDataSet);
                 barChart.setData(theData);
-                barChart.setTouchEnabled(false);
                 //barChart.getDescription().setEnabled(false);
+
+
+                final Calendar c = Calendar.getInstance();
+                mYear = c.get(Calendar.YEAR);
+                mMonth = c.get(Calendar.MONTH);
+                mDay = c.get(Calendar.DAY_OF_MONTH);
+                if (mMonth == 0) {
+                    curMonth = "Jan";
+                } else if (mMonth == 1) {
+                    curMonth = "February";
+                } else if (mMonth == 2) {
+                    curMonth = "March";
+                } else if (mMonth == 3) {
+                    curMonth = "April";
+                } else if (mMonth == 4) {
+                    curMonth = "May";
+                } else if (mMonth == 5) {
+                    curMonth = "June";
+                } else if (mMonth == 6) {
+                    curMonth = "July";
+                } else if (mMonth == 7) {
+                    curMonth = "August";
+                } else if (mMonth == 8) {
+                    curMonth = "September";
+                } else if (mMonth == 9) {
+                    curMonth = "October";
+                } else if (mMonth == 10) {
+                    curMonth = "November";
+                } else if (mMonth == 11) {
+                    curMonth = "December";
+                }
+
+                myDateView = findViewById(R.id.dateView);
+                myMonthView = findViewById(R.id.monthView);
+
+
+                //Setting day and month
+                myDateView.setText(Integer.toString(mDay));
+                myMonthView.setText((curMonth));
+
 
             }
 

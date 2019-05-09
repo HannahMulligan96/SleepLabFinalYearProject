@@ -33,7 +33,7 @@ public class Main2Activity extends AppCompatActivity {
         DatabaseReference myRefLight = database.getReference("light"); //Light database
         DatabaseReference myRefSound = database.getReference("sound"); //Sound database
 
-        //pulling temp value from database and displaying as a textview
+        //pulling temp value from database and displaying as a
         myRefTemp.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -57,6 +57,8 @@ public class Main2Activity extends AppCompatActivity {
                 Integer value = dataSnapshot.getValue(Integer.class);
                 lightView.setText("Current light is: " + value);
             }
+
+
 
             @Override
             public void onCancelled(DatabaseError error) {

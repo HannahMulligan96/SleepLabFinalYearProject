@@ -43,10 +43,10 @@ public class MotionData extends AppCompatActivity {
 
 
 
-        myDateView = (TextView) findViewById(R.id.dateView);
-        myMonthView = (TextView) findViewById(R.id.monthView);
+        myDateView = findViewById(R.id.dateView);
+        myMonthView = findViewById(R.id.monthView);
 
-        saveView = (Button) findViewById(R.id.save);
+        saveView = findViewById(R.id.save);
 
         //save
         saveView.setOnClickListener(new View.OnClickListener() {
@@ -108,7 +108,7 @@ public class MotionData extends AppCompatActivity {
                 final Integer barMotion1= dataSnapshot.child("Monday/Motion1").getValue(Integer.class);
                 final Integer barMotion2= dataSnapshot.child("Monday/Motion2").getValue(Integer.class);
                 // final Integer barSound3= dataSnapshot.child("Monday/Sound3").getValue(Integer.class);
-                barChart = (BarChart) findViewById(R.id.bargraph);
+                barChart = findViewById(R.id.bargraph);
 
 
                 ArrayList<BarEntry> barEntries = new ArrayList<>();

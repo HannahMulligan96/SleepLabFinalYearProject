@@ -43,25 +43,25 @@ public class HumFrag extends Fragment {
 
         @Override
         public void onDataChange(DataSnapshot dataSnapshot) {
-            TextView myTextHum = (TextView) getView().findViewById(R.id.testingHum);
+            TextView myTextHum = getView().findViewById(R.id.testingHum);
             myTextHum.setText(dataSnapshot.child("Hum/Hum1").getValue().toString());
-            TextView myTextHum1 = (TextView) getView().findViewById(R.id.testingHum2);
+            TextView myTextHum1 = getView().findViewById(R.id.testingHum2);
             myTextHum1.setText(dataSnapshot.child("Hum/Hum2").getValue().toString());
-            TextView myTextHum2 = (TextView) getView().findViewById(R.id.testingHum3);
+            TextView myTextHum2 = getView().findViewById(R.id.testingHum3);
             myTextHum2.setText(dataSnapshot.child("Hum/Hum3").getValue().toString());
-            TextView myTextHum3 = (TextView) getView().findViewById(R.id.testingHum4);
+            TextView myTextHum3 = getView().findViewById(R.id.testingHum4);
             myTextHum3.setText(dataSnapshot.child("Hum/Hum4").getValue().toString());
-            TextView myTextHum4 = (TextView) getView().findViewById(R.id.testingHum5);
+            TextView myTextHum4 = getView().findViewById(R.id.testingHum5);
             myTextHum4.setText(dataSnapshot.child("Hum/Hum5").getValue().toString());
-            TextView myTextHum5 = (TextView) getView().findViewById(R.id.testingHum6);
+            TextView myTextHum5 = getView().findViewById(R.id.testingHum6);
             myTextHum5.setText(dataSnapshot.child("Hum/Hum6").getValue().toString());
-            TextView myTextHum6 = (TextView) getView().findViewById(R.id.testingHum7);
+            TextView myTextHum6 = getView().findViewById(R.id.testingHum7);
             myTextHum6.setText(dataSnapshot.child("Hum/Hum7").getValue().toString());
-            TextView myTextHum7 = (TextView) getView().findViewById(R.id.testingHum8);
+            TextView myTextHum7 = getView().findViewById(R.id.testingHum8);
             myTextHum7.setText(dataSnapshot.child("Hum/Hum8").getValue().toString());
-            TextView myTextHum8 = (TextView) getView().findViewById(R.id.testingHum9);
+            TextView myTextHum8 = getView().findViewById(R.id.testingHum9);
             myTextHum8.setText(dataSnapshot.child("Hum/Hum9").getValue().toString());
-            TextView myTextHum9 = (TextView) getView().findViewById(R.id.testingHum10);
+            TextView myTextHum9 = getView().findViewById(R.id.testingHum10);
             myTextHum9.setText(dataSnapshot.child("Hum/Hum10").getValue().toString());
 
             //Calculating the average hum of the night
@@ -91,7 +91,7 @@ public class HumFrag extends Fragment {
 
             int result = calculate / 10;
 
-            TextView testingResultHum = (TextView) getView().findViewById(R.id.humAvg);
+            TextView testingResultHum = getView().findViewById(R.id.humAvg);
 
             testingResultHum.setText(" " + result);
 
@@ -110,7 +110,7 @@ public class HumFrag extends Fragment {
                 climateHum = "is the recommended humidity for sleeping";
             }
 
-            TextView climateResult = (TextView) getView().findViewById(R.id.climateResult3);
+            TextView climateResult = getView().findViewById(R.id.climateResult3);
 
             climateResult.setText((climateHum));
 
@@ -139,9 +139,9 @@ public class HumFrag extends Fragment {
 
         @Override
         public void onDataChange(DataSnapshot dataSnapshot) {
-            TextView myTextsHum = (TextView) getView().findViewById(R.id.humBed);
+            TextView myTextsHum = getView().findViewById(R.id.humBed);
             myTextsHum.setText(dataSnapshot.child("Data/BedTime").getValue().toString());
-            TextView myTextsHum1 = (TextView) getView().findViewById(R.id.humSleep);
+            TextView myTextsHum1 = getView().findViewById(R.id.humSleep);
             myTextsHum1.setText(dataSnapshot.child("Data/SleepTime").getValue().toString());
         }
 

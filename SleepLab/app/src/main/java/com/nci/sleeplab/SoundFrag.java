@@ -40,25 +40,25 @@ public class SoundFrag extends Fragment {
 
         ValueEventListener valueEventListener = new ValueEventListener() {
             @Override public void onDataChange(DataSnapshot dataSnapshot) {
-                TextView myTextSound = (TextView) getView().findViewById(R.id.testingSound);
+                TextView myTextSound = getView().findViewById(R.id.testingSound);
                 myTextSound.setText(dataSnapshot.child("Sound/Sound1").getValue().toString());
-                TextView myTextSound1 = (TextView) getView().findViewById(R.id.testingSound2);
+                TextView myTextSound1 = getView().findViewById(R.id.testingSound2);
                 myTextSound1.setText(dataSnapshot.child("Sound/Sound2").getValue().toString());
-                TextView myTextSound2 = (TextView) getView().findViewById(R.id.testingSound3);
+                TextView myTextSound2 = getView().findViewById(R.id.testingSound3);
                 myTextSound2.setText(dataSnapshot.child("Sound/Sound3").getValue().toString());
-                TextView myTextSound3 = (TextView) getView().findViewById(R.id.testingSound4);
+                TextView myTextSound3 = getView().findViewById(R.id.testingSound4);
                 myTextSound3.setText(dataSnapshot.child("Sound/Sound4").getValue().toString());
-                TextView myTextSound4 = (TextView) getView().findViewById(R.id.testingSound5);
+                TextView myTextSound4 = getView().findViewById(R.id.testingSound5);
                 myTextSound4.setText(dataSnapshot.child("Sound/Sound5").getValue().toString());
-                TextView myTextSound5 = (TextView) getView().findViewById(R.id.testingSound6);
+                TextView myTextSound5 = getView().findViewById(R.id.testingSound6);
                 myTextSound5.setText(dataSnapshot.child("Sound/Sound6").getValue().toString());
-                TextView myTextSound6 = (TextView) getView().findViewById(R.id.testingSound7);
+                TextView myTextSound6 = getView().findViewById(R.id.testingSound7);
                 myTextSound6.setText(dataSnapshot.child("Sound/Sound7").getValue().toString());
-                TextView myTextSound7 = (TextView) getView().findViewById(R.id.testingSound8);
+                TextView myTextSound7 = getView().findViewById(R.id.testingSound8);
                 myTextSound7.setText(dataSnapshot.child("Sound/Sound8").getValue().toString());
-                TextView myTextSound8 = (TextView) getView().findViewById(R.id.testingSound9);
+                TextView myTextSound8 = getView().findViewById(R.id.testingSound9);
                 myTextSound8.setText(dataSnapshot.child("Sound/Sound9").getValue().toString());
-                TextView myTextSound9 = (TextView) getView().findViewById(R.id.testingSound10);
+                TextView myTextSound9 = getView().findViewById(R.id.testingSound10);
                 myTextSound9.setText(dataSnapshot.child("Sound/Sound10").getValue().toString());
 
 
@@ -90,7 +90,7 @@ public class SoundFrag extends Fragment {
                 int result = calculate / 10;
 
 
-                TextView testingResult = (TextView) getView().findViewById(R.id.soundResult);
+                TextView testingResult = getView().findViewById(R.id.soundResult);
 
                 testingResult.setText(" " + result);
 
@@ -108,7 +108,7 @@ public class SoundFrag extends Fragment {
                     climateSound = "is the recommended sound level for sleeping";
                 }
 
-                TextView climateResult = (TextView) getView().findViewById(R.id.climateSoundResult);
+                TextView climateResult = getView().findViewById(R.id.climateSoundResult);
 
                 climateResult.setText((climateSound));
             }
@@ -132,9 +132,9 @@ public class SoundFrag extends Fragment {
 
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                TextView myTextsSound = (TextView) getView().findViewById(R.id.soundBed);
+                TextView myTextsSound = getView().findViewById(R.id.soundBed);
                 myTextsSound.setText(dataSnapshot.child("Data/BedTime").getValue().toString());
-                TextView myTexts1Sound = (TextView) getView().findViewById(R.id.soundSleep);
+                TextView myTexts1Sound = getView().findViewById(R.id.soundSleep);
                 myTexts1Sound.setText(dataSnapshot.child("Data/SleepTime").getValue().toString());
 
 

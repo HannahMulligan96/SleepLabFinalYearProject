@@ -31,55 +31,11 @@ public class LightData extends AppCompatActivity {
 
     BarChart barChart;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_light_data);
 
-
-
-
-
-        myDateView = (TextView) findViewById(R.id.dateView);
-        myMonthView = (TextView) findViewById(R.id.monthView);
-
-
-        final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-        if (mMonth == 0) {
-            curMonth = "Jan";
-        } else if (mMonth == 1) {
-            curMonth = "February";
-        } else if (mMonth == 2) {
-            curMonth = "March";
-        } else if (mMonth == 3) {
-            curMonth = "April";
-        } else if (mMonth == 4) {
-            curMonth = "May";
-        } else if (mMonth == 5) {
-            curMonth = "June";
-        } else if (mMonth == 6) {
-            curMonth = "July";
-        } else if (mMonth == 7) {
-            curMonth = "August";
-        } else if (mMonth == 8) {
-            curMonth = "September";
-        } else if (mMonth == 9) {
-            curMonth = "October";
-        } else if (mMonth == 10) {
-            curMonth = "November";
-        } else if (mMonth == 11) {
-            curMonth = "December";
-        }
-
-        //Setting day and month
-        myDateView.setText(Integer.toString(mDay));
-        myMonthView.setText((curMonth));
-
-
-        // Write a message to the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRefLight = database.getReference("LightValues");
 
@@ -87,10 +43,17 @@ public class LightData extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
-                final Integer barLight1= dataSnapshot.child("Light/Light1").getValue(Integer.class);
-                final Integer barLight2= dataSnapshot.child("Light/Light2").getValue(Integer.class);
-                final Integer barLight3= dataSnapshot.child("Light/Light3").getValue(Integer.class);
-                barChart = (BarChart) findViewById(R.id.bargraph);
+                final Integer barLight1 = dataSnapshot.child("Light/Light1").getValue(Integer.class);
+                final Integer barLight2 = dataSnapshot.child("Light/Light2").getValue(Integer.class);
+                final Integer barLight3 = dataSnapshot.child("Light/Light3").getValue(Integer.class);
+                final Integer barLight4 = dataSnapshot.child("Light/Light4").getValue(Integer.class);
+                final Integer barLight5 = dataSnapshot.child("Light/Light5").getValue(Integer.class);
+                final Integer barLight6 = dataSnapshot.child("Light/Light6").getValue(Integer.class);
+                final Integer barLight7 = dataSnapshot.child("Light/Light7").getValue(Integer.class);
+                final Integer barLight8 = dataSnapshot.child("Light/Light8").getValue(Integer.class);
+                final Integer barLight9 = dataSnapshot.child("Light/Light9").getValue(Integer.class);
+                final Integer barLight10 = dataSnapshot.child("Light/Light10").getValue(Integer.class);
+                // barChart = findViewById(R.id.bargraph);
 
 
                 ArrayList<BarEntry> barEntries = new ArrayList<>();
@@ -98,37 +61,82 @@ public class LightData extends AppCompatActivity {
                 barEntries.add(new BarEntry(barLight1, 0));
                 barEntries.add(new BarEntry(barLight2, 1));
                 barEntries.add(new BarEntry(barLight3, 2));
-                barEntries.add(new BarEntry(371f, 3));
-                barEntries.add(new BarEntry(389f, 5));
-                barEntries.add(new BarEntry(395f, 6));
-                barEntries.add(new BarEntry(409f, 7));
-                barEntries.add(new BarEntry(409f, 8));
-                barEntries.add(new BarEntry(409f, 9));
-                barEntries.add(new BarEntry(409f, 10));
+                barEntries.add(new BarEntry(barLight4, 3));
+                barEntries.add(new BarEntry(barLight5, 4));
+                barEntries.add(new BarEntry(barLight6, 5));
+                barEntries.add(new BarEntry(barLight7, 6));
+                barEntries.add(new BarEntry(barLight8, 7));
+                barEntries.add(new BarEntry(barLight9, 8));
+                barEntries.add(new BarEntry(barLight10, 9));
                 BarDataSet barDataSet = new BarDataSet(barEntries, "Light Values");
+
+
+
+        setContentView(R.layout.activity_light_data);
+
+        barChart = findViewById(R.id.bargraph);
+
+        barChart.setTouchEnabled(false);
+        barChart.setNoDataText("Loading graph data");
 
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
 
                 ArrayList<String> theLight = new ArrayList<>();
-                theLight.add("11:00");
-                theLight.add("12:00");
-                theLight.add("1:00");
-                theLight.add("2:00");
-                theLight.add("3:00");
-                theLight.add("4:00");
-                theLight.add("5:00");
-                theLight.add("6:00");
-                theLight.add("7:00");
-                theLight.add("8:00");
+                theLight.add("11 / 12");
+                theLight.add("12");
+                theLight.add("1 / 2");
+                theLight.add("2");
+                theLight.add("3 / 4");
+                theLight.add("4");
+                theLight.add("5 / 6");
+                theLight.add("6");
+                theLight.add("7 / 8");
+                theLight.add("8");
 
 
                 BarData theData = new BarData(theLight, barDataSet);
                 barChart.setData(theData);
-                barChart.setTouchEnabled(false);
-                //barChart.getDescription().setEnabled(false);
+
+
+                myDateView = findViewById(R.id.dateView);
+                myMonthView = findViewById(R.id.monthView);
+
+
+                final Calendar c = Calendar.getInstance();
+                mYear = c.get(Calendar.YEAR);
+                mMonth = c.get(Calendar.MONTH);
+                mDay = c.get(Calendar.DAY_OF_MONTH);
+                if (mMonth == 0) {
+                    curMonth = "Jan";
+                } else if (mMonth == 1) {
+                    curMonth = "February";
+                } else if (mMonth == 2) {
+                    curMonth = "March";
+                } else if (mMonth == 3) {
+                    curMonth = "April";
+                } else if (mMonth == 4) {
+                    curMonth = "May";
+                } else if (mMonth == 5) {
+                    curMonth = "June";
+                } else if (mMonth == 6) {
+                    curMonth = "July";
+                } else if (mMonth == 7) {
+                    curMonth = "August";
+                } else if (mMonth == 8) {
+                    curMonth = "September";
+                } else if (mMonth == 9) {
+                    curMonth = "October";
+                } else if (mMonth == 10) {
+                    curMonth = "November";
+                } else if (mMonth == 11) {
+                    curMonth = "December";
+                }
+
+                //Setting day and month
+                myDateView.setText(Integer.toString(mDay));
+                myMonthView.setText((curMonth));
 
             }
-
 
 
             @Override

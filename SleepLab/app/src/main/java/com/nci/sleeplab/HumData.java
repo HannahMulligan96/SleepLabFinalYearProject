@@ -30,14 +30,82 @@ public class HumData extends AppCompatActivity {
     private TextView myMonthView;
     private static final String TAG = "Hum";
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hum_data);
 
 
-        myDateView = (TextView) findViewById(R.id.dateView);
-        myMonthView = (TextView) findViewById(R.id.monthView);
+
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRefSound = database.getReference("HumValues");
+
+        myRefSound.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+                final Integer barHum1= dataSnapshot.child("Hum/Hum1").getValue(Integer.class);
+                final Integer barHum2= dataSnapshot.child("Hum/Hum2").getValue(Integer.class);
+                final Integer barHum3= dataSnapshot.child("Hum/Hum3").getValue(Integer.class);
+                final Integer barHum4= dataSnapshot.child("Hum/Hum4").getValue(Integer.class);
+                final Integer barHum5= dataSnapshot.child("Hum/Hum5").getValue(Integer.class);
+                final Integer barHum6= dataSnapshot.child("Hum/Hum6").getValue(Integer.class);
+                final Integer barHum7= dataSnapshot.child("Hum/Hum7").getValue(Integer.class);
+                final Integer barHum8= dataSnapshot.child("Hum/Hum8").getValue(Integer.class);
+                final Integer barHum9= dataSnapshot.child("Hum/Hum9").getValue(Integer.class);
+                final Integer barHum10= dataSnapshot.child("Hum/Hum10").getValue(Integer.class);
+
+
+
+
+                ArrayList<BarEntry> barEntries = new ArrayList<>();
+
+                barEntries.add(new BarEntry(barHum1, 0));
+                barEntries.add(new BarEntry(barHum2, 1));
+                barEntries.add(new BarEntry(barHum3, 2));
+                barEntries.add(new BarEntry(barHum4, 3));
+                barEntries.add(new BarEntry(barHum5, 4));
+                barEntries.add(new BarEntry(barHum6, 5));
+                barEntries.add(new BarEntry(barHum7, 6));
+                barEntries.add(new BarEntry(barHum8, 7));
+                barEntries.add(new BarEntry(barHum9, 8));
+                barEntries.add(new BarEntry(barHum10, 9));
+
+                BarDataSet barDataSet = new BarDataSet(barEntries, "Humidity Values");
+
+
+                setContentView(R.layout.activity_hum_data);
+                barChart = findViewById(R.id.bargraph);
+
+                barChart.setTouchEnabled(false);
+                barChart.setNoDataText("Loading graph data");
+
+
+                barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
+
+                ArrayList<String> theHum= new ArrayList<>();
+                theHum.add("11");
+                theHum.add("12");
+                theHum.add("1");
+                theHum.add("2");
+                theHum.add("3");
+                theHum.add("4");
+                theHum.add("5");
+                theHum.add("6");
+                theHum.add("7");
+                theHum.add("8");
+
+                //specifications for graphs
+                BarData theData = new BarData(theHum, barDataSet);
+                barChart.setData(theData);
+
+
+
+                //
+        myDateView = findViewById(R.id.dateView);
+        myMonthView = findViewById(R.id.monthView);
 
 
         final Calendar c = Calendar.getInstance();
@@ -73,56 +141,6 @@ public class HumData extends AppCompatActivity {
         //Setting day and month
         myDateView.setText(Integer.toString(mDay));
         myMonthView.setText((curMonth));
-
-
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRefSound = database.getReference("HumValues");
-
-        myRefSound.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                final Integer barHum1= dataSnapshot.child("Hum/Hum1").getValue(Integer.class);
-                final Integer barHum2= dataSnapshot.child("Hum/Hum2").getValue(Integer.class);
-                final Integer barHum3= dataSnapshot.child("Hum/Hum3").getValue(Integer.class);
-                barChart = (BarChart) findViewById(R.id.bargraph);
-
-
-                ArrayList<BarEntry> barEntries = new ArrayList<>();
-
-                barEntries.add(new BarEntry(barHum1, 0));
-                barEntries.add(new BarEntry(barHum2, 1));
-                barEntries.add(new BarEntry(barHum3, 2));
-                barEntries.add(new BarEntry(30f, 3));
-                barEntries.add(new BarEntry(30f, 4));
-                barEntries.add(new BarEntry(23f, 5));
-                barEntries.add(new BarEntry(12f, 6));
-               // barEntries.add(new BarEntry(409f, 7));
-               // barEntries.add(new BarEntry(409f, 8));
-               // barEntries.add(new BarEntry(409f, 9));
-               //barEntries.add(new BarEntry(409f, 10));
-
-                BarDataSet barDataSet = new BarDataSet(barEntries, "Humidity Values");
-
-                barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
-
-                ArrayList<String> theHum= new ArrayList<>();
-                theHum.add("11:00");
-                theHum.add("12:00");
-                theHum.add("1:00");
-                theHum.add("2:00");
-                theHum.add("3:00");
-                theHum.add("4:00");
-               // theHum.add("5:00");
-               // theHum.add("6:00");
-               // theHum.add("7:00");
-               // theHum.add("8:00");
-
-                //specifications for graphs
-                BarData theData = new BarData(theHum, barDataSet);
-                barChart.setData(theData);
-                barChart.setTouchEnabled(false);
 
 
             }

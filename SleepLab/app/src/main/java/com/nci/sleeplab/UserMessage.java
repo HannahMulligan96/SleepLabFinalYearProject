@@ -17,8 +17,8 @@ public class UserMessage extends AppCompatActivity {
         setContentView(R.layout.activity_user_message);
 
 
-        buttonAdd = (Button) findViewById(R.id.addButton);
-        buttonBack = (Button) findViewById(R.id.backButton);
+        buttonAdd = findViewById(R.id.addButton);
+        buttonBack = findViewById(R.id.backButton);
 
         //Buttons on click
         buttonAdd.setOnClickListener(new View.OnClickListener() {

@@ -46,12 +46,12 @@ public class userdata extends AppCompatActivity  {
         setContentView(R.layout.activity_user_data);
 
 
-        mTimeTextView =(TextView) findViewById(R.id.bedTime);
+        mTimeTextView = findViewById(R.id.bedTime);
         Calendar calendar =Calendar.getInstance();
         final int hour =calendar.get(Calendar.HOUR_OF_DAY);
         final int minute =calendar.get(Calendar.MINUTE);
 
-        mtime = (Button) findViewById(R.id.bedButton);
+        mtime = findViewById(R.id.bedButton);
 
         mtime.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,12 +67,12 @@ public class userdata extends AppCompatActivity  {
             }
         });
 
-        mTime2TextView =(TextView) findViewById(R.id.sleepTime);
+        mTime2TextView = findViewById(R.id.sleepTime);
         Calendar calendar2 =Calendar.getInstance();
         final int hour2 =calendar2.get(Calendar.HOUR_OF_DAY);
         final int minute2 =calendar2.get(Calendar.MINUTE);
 
-        mtime2 = (Button) findViewById(R.id.sleepButton);
+        mtime2 = findViewById(R.id.sleepButton);
 
         mtime2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,7 +90,7 @@ public class userdata extends AppCompatActivity  {
 
 
         //Sending user data to firebase save button
-        myButton = (Button) findViewById(R.id.logButton);
+        myButton = findViewById(R.id.logButton);
         myButton.setOnClickListener(new View.OnClickListener() {
 
             final EditText myText1 = findViewById(R.id.sleepHours);
@@ -113,7 +113,7 @@ public class userdata extends AppCompatActivity  {
 
         });
 
-        myButton2 = (Button) findViewById(R.id.saveButton);
+        myButton2 = findViewById(R.id.saveButton);
         myButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -126,11 +126,11 @@ public class userdata extends AppCompatActivity  {
 
 
         //Displaying month and day
-        myDateView = (TextView) findViewById(R.id.dateView);
-        myMonthView = (TextView) findViewById(R.id.monthView);
-        mysleepTime = (TextView) findViewById(R.id.sleepTime);
-        myBedTime = (TextView) findViewById(R.id.bedTime);
-        mysleepHours = (TextView) findViewById(R.id.sleepHours);
+        myDateView = findViewById(R.id.dateView);
+        myMonthView = findViewById(R.id.monthView);
+        mysleepTime = findViewById(R.id.sleepTime);
+        myBedTime = findViewById(R.id.bedTime);
+        mysleepHours = findViewById(R.id.sleepHours);
 
 
         final Calendar c = Calendar.getInstance();

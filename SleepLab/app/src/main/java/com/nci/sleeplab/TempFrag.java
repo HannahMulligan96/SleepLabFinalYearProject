@@ -49,25 +49,25 @@ public class TempFrag extends Fragment {
         ValueEventListener valueEventListener = new ValueEventListener() {
 
             @Override public void onDataChange(DataSnapshot dataSnapshot) {
-            TextView myText = (TextView) getView().findViewById(R.id.testingTemp);
+            TextView myText = getView().findViewById(R.id.testingTemp);
             myText.setText(dataSnapshot.child("Temp/Temp1").getValue().toString());
-            TextView myText1 = (TextView) getView().findViewById(R.id.testingTemp2);
+            TextView myText1 = getView().findViewById(R.id.testingTemp2);
             myText1.setText(dataSnapshot.child("Temp/Temp2").getValue().toString());
-            TextView myText2 = (TextView) getView().findViewById(R.id.testingTemp3);
+            TextView myText2 = getView().findViewById(R.id.testingTemp3);
             myText2.setText(dataSnapshot.child("Temp/Temp3").getValue().toString());
-            TextView myText3 = (TextView) getView().findViewById(R.id.testingTemp4);
+            TextView myText3 = getView().findViewById(R.id.testingTemp4);
             myText3.setText(dataSnapshot.child("Temp/Temp4").getValue().toString());
-            TextView myText4 = (TextView) getView().findViewById(R.id.testingTemp5);
+            TextView myText4 = getView().findViewById(R.id.testingTemp5);
             myText4.setText(dataSnapshot.child("Temp/Temp5").getValue().toString());
-            TextView myText5 = (TextView) getView().findViewById(R.id.testingTemp6);
+            TextView myText5 = getView().findViewById(R.id.testingTemp6);
             myText5.setText(dataSnapshot.child("Temp/Temp6").getValue().toString());
-            TextView myText6 = (TextView) getView().findViewById(R.id.testingTemp7);
+            TextView myText6 = getView().findViewById(R.id.testingTemp7);
             myText6.setText(dataSnapshot.child("Temp/Temp7").getValue().toString());
-            TextView myText7 = (TextView) getView().findViewById(R.id.testingTemp8);
+            TextView myText7 = getView().findViewById(R.id.testingTemp8);
             myText7.setText(dataSnapshot.child("Temp/Temp8").getValue().toString());
-            TextView myText8 = (TextView) getView().findViewById(R.id.testingTemp9);
+            TextView myText8 = getView().findViewById(R.id.testingTemp9);
             myText8.setText(dataSnapshot.child("Temp/Temp9").getValue().toString());
-            TextView myText9 = (TextView) getView().findViewById(R.id.testingTemp10);
+            TextView myText9 = getView().findViewById(R.id.testingTemp10);
             myText9.setText(dataSnapshot.child("Temp/Temp10").getValue().toString());
 
             //Calculating the average temp of the night from the 10 temp values
@@ -97,7 +97,7 @@ public class TempFrag extends Fragment {
 
             int result = calculate / 10;
 
-            TextView testingResult = (TextView) getView().findViewById(R.id.testingResult);
+            TextView testingResult = getView().findViewById(R.id.testingResult);
 
             testingResult.setText(" " + result);
 
@@ -115,7 +115,7 @@ public class TempFrag extends Fragment {
                 climate = "is the recommended temperature for sleeping";
             }
 
-            TextView climateResult = (TextView) getView().findViewById(R.id.climateResult);
+            TextView climateResult = getView().findViewById(R.id.climateResult);
 
             climateResult.setText((climate));
 
@@ -140,9 +140,9 @@ public class TempFrag extends Fragment {
 
         @Override
         public void onDataChange(DataSnapshot dataSnapshot) {
-            TextView myTexts = (TextView) getView().findViewById(R.id.tempBed);
+            TextView myTexts = getView().findViewById(R.id.tempBed);
             myTexts.setText(dataSnapshot.child("Data/BedTime").getValue().toString());
-            TextView myTexts1 = (TextView) getView().findViewById(R.id.tempSleep);
+            TextView myTexts1 = getView().findViewById(R.id.tempSleep);
             myTexts1.setText(dataSnapshot.child("Data/SleepTime").getValue().toString());
 
 

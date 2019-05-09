@@ -42,25 +42,25 @@ public class LightFrag extends Fragment {
 
     ValueEventListener valueEventListener = new ValueEventListener() {
         @Override public void onDataChange(DataSnapshot dataSnapshot) {
-            TextView myTextLight = (TextView) getView().findViewById(R.id.testingLight);
+            TextView myTextLight = getView().findViewById(R.id.testingLight);
             myTextLight.setText(dataSnapshot.child("Light/Light1").getValue().toString());
-            TextView myTextLight1 = (TextView) getView().findViewById(R.id.testingLight2);
+            TextView myTextLight1 = getView().findViewById(R.id.testingLight2);
             myTextLight1.setText(dataSnapshot.child("Light/Light2").getValue().toString());
-            TextView myTextLight2 = (TextView) getView().findViewById(R.id.testingLight3);
+            TextView myTextLight2 = getView().findViewById(R.id.testingLight3);
             myTextLight2.setText(dataSnapshot.child("Light/Light3").getValue().toString());
-            TextView myTextLight3 = (TextView) getView().findViewById(R.id.testingLight4);
+            TextView myTextLight3 = getView().findViewById(R.id.testingLight4);
             myTextLight3.setText(dataSnapshot.child("Light/Light4").getValue().toString());
-            TextView myTextLight4 = (TextView) getView().findViewById(R.id.testingLight5);
+            TextView myTextLight4 = getView().findViewById(R.id.testingLight5);
             myTextLight4.setText(dataSnapshot.child("Light/Light5").getValue().toString());
-            TextView myTextLight5 = (TextView) getView().findViewById(R.id.testingLight6);
+            TextView myTextLight5 = getView().findViewById(R.id.testingLight6);
             myTextLight5.setText(dataSnapshot.child("Light/Light6").getValue().toString());
-            TextView myTextLight6 = (TextView) getView().findViewById(R.id.testingLight7);
+            TextView myTextLight6 = getView().findViewById(R.id.testingLight7);
             myTextLight6.setText(dataSnapshot.child("Light/Light7").getValue().toString());
-            TextView myTextLight7 = (TextView) getView().findViewById(R.id.testingLight8);
+            TextView myTextLight7 = getView().findViewById(R.id.testingLight8);
             myTextLight7.setText(dataSnapshot.child("Light/Light8").getValue().toString());
-            TextView myTextLight8 = (TextView) getView().findViewById(R.id.testingLight9);
+            TextView myTextLight8 = getView().findViewById(R.id.testingLight9);
             myTextLight8.setText(dataSnapshot.child("Light/Light9").getValue().toString());
-            TextView myTextLight9 = (TextView) getView().findViewById(R.id.testingLight10);
+            TextView myTextLight9 = getView().findViewById(R.id.testingLight10);
             myTextLight9.setText(dataSnapshot.child("Light/Light10").getValue().toString());
 
 //Calculating the average temp of the night
@@ -90,7 +90,7 @@ public class LightFrag extends Fragment {
 
             int result = calculate / 10;
 
-            TextView testingResult = (TextView) getView().findViewById(R.id.lightResult);
+            TextView testingResult = getView().findViewById(R.id.lightResult);
 
             testingResult.setText(" " + result);
 
@@ -105,7 +105,7 @@ public class LightFrag extends Fragment {
             }
 
 
-            TextView climateResult = (TextView) getView().findViewById(R.id.climateLightResult);
+            TextView climateResult = getView().findViewById(R.id.climateLightResult);
 
             climateResult.setText((climateLight));
 
@@ -130,9 +130,9 @@ public class LightFrag extends Fragment {
 
         @Override
         public void onDataChange(DataSnapshot dataSnapshot) {
-            TextView myTextsLight = (TextView) getView().findViewById(R.id.lightBed);
+            TextView myTextsLight = getView().findViewById(R.id.lightBed);
             myTextsLight.setText(dataSnapshot.child("Data/BedTime").getValue().toString());
-            TextView myTexts1Light = (TextView) getView().findViewById(R.id.lightSleep);
+            TextView myTexts1Light = getView().findViewById(R.id.lightSleep);
             myTexts1Light.setText(dataSnapshot.child("Data/SleepTime").getValue().toString());
 
 

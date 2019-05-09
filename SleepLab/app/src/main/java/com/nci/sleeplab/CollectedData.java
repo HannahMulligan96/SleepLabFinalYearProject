@@ -24,11 +24,11 @@ public class CollectedData extends AppCompatActivity {
         setContentView(R.layout.activity_collected_data);
 
         //Onclick
-        lightView = (ImageView) findViewById(R.id.lightOnClick);
-        TempView = (ImageView) findViewById(R.id.TempOnClick);
-        HumView = (ImageView) findViewById(R.id.HumOnClick);
-        SoundView = (ImageView) findViewById(R.id.SoundOnClick);
-        MotionView = (ImageView) findViewById(R.id.MotionOnClick);
+        lightView = findViewById(R.id.lightOnClick);
+        TempView = findViewById(R.id.TempOnClick);
+        HumView = findViewById(R.id.HumOnClick);
+        SoundView = findViewById(R.id.SoundOnClick);
+        MotionView = findViewById(R.id.MotionOnClick);
 
 
         //Light activity

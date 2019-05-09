@@ -50,25 +50,25 @@ public class MotionFrag extends Fragment {
 
     ValueEventListener valueEventListener = new ValueEventListener() {
         @Override public void onDataChange(DataSnapshot dataSnapshot) {
-            TextView myTextMotion = (TextView) getView().findViewById(R.id.testingMotion);
+            TextView myTextMotion = getView().findViewById(R.id.testingMotion);
             myTextMotion.setText(dataSnapshot.child("Motion/Motion1").getValue().toString());
-            TextView myTextMotion1 = (TextView) getView().findViewById(R.id.testingMotion2);
+            TextView myTextMotion1 = getView().findViewById(R.id.testingMotion2);
             myTextMotion1.setText(dataSnapshot.child("Motion/Motion2").getValue().toString());
-            TextView myTextMotion2 = (TextView) getView().findViewById(R.id.testingMotion3);
+            TextView myTextMotion2 = getView().findViewById(R.id.testingMotion3);
             myTextMotion2.setText(dataSnapshot.child("Motion/Motion3").getValue().toString());
-            TextView myTextMotion3 = (TextView) getView().findViewById(R.id.testingMotion4);
+            TextView myTextMotion3 = getView().findViewById(R.id.testingMotion4);
             myTextMotion3.setText(dataSnapshot.child("Motion/Motion4").getValue().toString());
-            TextView myTextMotion4 = (TextView) getView().findViewById(R.id.testingMotion5);
+            TextView myTextMotion4 = getView().findViewById(R.id.testingMotion5);
             myTextMotion4.setText(dataSnapshot.child("Motion/Motion5").getValue().toString());
-            TextView myTextMotion5 = (TextView) getView().findViewById(R.id.testingMotion6);
+            TextView myTextMotion5 = getView().findViewById(R.id.testingMotion6);
             myTextMotion5.setText(dataSnapshot.child("Motion/Motion6").getValue().toString());
-            TextView myTextMotion6 = (TextView) getView().findViewById(R.id.testingMotion7);
+            TextView myTextMotion6 = getView().findViewById(R.id.testingMotion7);
             myTextMotion6.setText(dataSnapshot.child("Motion/Motion7").getValue().toString());
-            TextView myTextMotion7 = (TextView) getView().findViewById(R.id.testingMotion8);
+            TextView myTextMotion7 = getView().findViewById(R.id.testingMotion8);
             myTextMotion7.setText(dataSnapshot.child("Motion/Motion8").getValue().toString());
-            TextView myTextMotion8 = (TextView) getView().findViewById(R.id.testingMotion9);
+            TextView myTextMotion8 = getView().findViewById(R.id.testingMotion9);
             myTextMotion8.setText(dataSnapshot.child("Motion/Motion9").getValue().toString());
-            TextView myTextMotion9 = (TextView) getView().findViewById(R.id.testingMotion10);
+            TextView myTextMotion9 = getView().findViewById(R.id.testingMotion10);
             myTextMotion9.setText(dataSnapshot.child("Motion/Motion10").getValue().toString());
 
 
@@ -100,7 +100,7 @@ public class MotionFrag extends Fragment {
             int result = calculate / 10;
 
 
-            TextView testingResult = (TextView) getView().findViewById(R.id.motionResult);
+            TextView testingResult = getView().findViewById(R.id.motionResult);
 
             testingResult.setText(" " + result);
 
@@ -118,7 +118,7 @@ public class MotionFrag extends Fragment {
                 climateMotion = "is the recommended Motion level for sleeping";
             }
 
-            TextView climateResult = (TextView) getView().findViewById(R.id.climateMotionResult);
+            TextView climateResult = getView().findViewById(R.id.climateMotionResult);
 
             climateResult.setText((climateMotion));
         }
@@ -142,9 +142,9 @@ public class MotionFrag extends Fragment {
 
         @Override
         public void onDataChange(DataSnapshot dataSnapshot) {
-            TextView myTextsMotion = (TextView) getView().findViewById(R.id.motionBed);
+            TextView myTextsMotion = getView().findViewById(R.id.motionBed);
             myTextsMotion.setText(dataSnapshot.child("Data/BedTime").getValue().toString());
-            TextView myTexts1Motion = (TextView) getView().findViewById(R.id.motionSleep);
+            TextView myTexts1Motion = getView().findViewById(R.id.motionSleep);
             myTexts1Motion.setText(dataSnapshot.child("Data/SleepTime").getValue().toString());
 
 

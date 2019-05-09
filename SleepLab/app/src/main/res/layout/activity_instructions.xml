@@ -34,10 +34,10 @@
         android:id="@+id/imageView11"
         android:layout_width="149dp"
         android:layout_height="71dp"
-        android:layout_marginTop="432dp"
+        android:layout_marginTop="436dp"
         android:src="@drawable/tempsensor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.876"
+        app:layout_constraintHorizontal_bias="0.931"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,10 +57,10 @@
         android:id="@+id/imageView12"
         android:layout_width="149dp"
         android:layout_height="75dp"
-        android:layout_marginTop="432dp"
+        android:layout_marginTop="436dp"
         android:src="@drawable/soundsensor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.242"
+        app:layout_constraintHorizontal_bias="0.123"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -69,7 +69,7 @@
         android:id="@+id/imageView14"
         android:layout_width="149dp"
         android:layout_height="75dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="336dp"
         android:src="@drawable/grove"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -80,7 +80,7 @@
         android:id="@+id/imageView17"
         android:layout_width="149dp"
         android:layout_height="73dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="420dp"
         android:src="@drawable/rasppi"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
@@ -116,7 +116,7 @@
         android:layout_marginEnd="163dp"
         android:layout_marginBottom="164dp"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="When the script is ran the system should run seamlessly in the background while you sleep"
+        android:text="When the script is ran the system should run seamlessly in the background while you sleep. The hardware must be on a flat surface and close to where you sleep."
         android:textAlignment="center"
         android:textColor="#594A42"
         android:textSize="20sp"
@@ -124,7 +124,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.615" />
+        app:layout_constraintVertical_bias="0.566" />
 
     <TextView
         android:id="@+id/instructions4"
@@ -143,6 +143,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.954" />
 
 </android.support.constraint.ConstraintLayout>

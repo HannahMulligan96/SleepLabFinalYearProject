@@ -43,10 +43,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
         //initializing views
-        buttonSignIn = (Button) findViewById(R.id.buttonSignIn);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textViewLogIn = (TextView) findViewById(R.id.textViewLogIn);
+        buttonSignIn = findViewById(R.id.buttonSignIn);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        textViewLogIn = findViewById(R.id.textViewLogIn);
 
 
         buttonSignIn.setOnClickListener(this);

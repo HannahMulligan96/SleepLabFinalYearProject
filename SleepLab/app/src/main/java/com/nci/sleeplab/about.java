@@ -23,8 +23,7 @@ public class about extends AppCompatActivity {
         return true;
     }
 
-    //Home icon on select
-    @Override
+     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.home:

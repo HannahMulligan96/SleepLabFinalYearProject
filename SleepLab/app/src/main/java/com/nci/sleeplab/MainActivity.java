@@ -47,10 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //progressBar = new ProgressBar(this);
 
         //initializing views
-        buttonRegister = (Button) findViewById(R.id.buttonRegister);
-        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        textViewSignIn = (TextView) findViewById(R.id.textViewSignIn);
+        buttonRegister = findViewById(R.id.buttonRegister);
+        editTextEmail = findViewById(R.id.editTextEmail);
+        editTextPassword = findViewById(R.id.editTextPassword);
+        textViewSignIn = findViewById(R.id.textViewSignIn);
 
         buttonRegister.setOnClickListener(this);
         textViewSignIn.setOnClickListener(this);

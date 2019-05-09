@@ -39,7 +39,7 @@ public class Profile extends AppCompatActivity {
 
         //initializing firebase authentication
         firebaseAuth = FirebaseAuth.getInstance();
-        buttonLogout = (Button) findViewById(R.id.buttonLogout);
+        buttonLogout = findViewById(R.id.buttonLogout);
 
 
         //Firebase authentication
@@ -49,13 +49,13 @@ public class Profile extends AppCompatActivity {
         }
 
         FirebaseUser user = firebaseAuth.getCurrentUser();
-        textViewUserEmail = (TextView) findViewById(R.id.textViewUserEmail);
+        textViewUserEmail = findViewById(R.id.textViewUserEmail);
         textViewUserEmail.setText( user.getEmail());
 
         //Set onclick to images on cardview
-        DataView = (ImageView) findViewById(R.id.DataOnClick);
-        AnalyzeView = (ImageView) findViewById(R.id.AnalyzeOnClick);
-        diaryView = (ImageView) findViewById(R.id.diaryOnClick);
+        DataView = findViewById(R.id.DataOnClick);
+        AnalyzeView = findViewById(R.id.AnalyzeOnClick);
+        diaryView = findViewById(R.id.diaryOnClick);
 
 
         //logs user out of system

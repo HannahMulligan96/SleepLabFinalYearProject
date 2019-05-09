@@ -16,8 +16,8 @@ public class AnalyzeMessage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_analyze_message);
 
-        buttonBack = (Button) findViewById(R.id.backButton2);
-        buttonAnalyze = (Button) findViewById(R.id.analyzeButton);
+        buttonBack = findViewById(R.id.backButton2);
+        buttonAnalyze = findViewById(R.id.analyzeButton);
 
         //back button
         buttonBack.setOnClickListener(new View.OnClickListener() {
