@@ -23,7 +23,7 @@ public class HumFrag extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.humtfrag_layout, container, false);
+        View view = inflater.inflate(R.layout.humfrag_layout, container, false);
         //Calling to get data
         getDataHum();
         getDataHum2();
@@ -93,17 +93,17 @@ public class HumFrag extends Fragment {
 
             TextView testingResultHum = getView().findViewById(R.id.humAvg);
 
-            testingResultHum.setText(" " + result);
+            testingResultHum.setText(" " + result +"%");
 
 
-            int max = 30;
-            int min = 50;
+            int max = 50;
+            int min = 30;
 
 
-            if (result > 30) {
+            if (result > 50) {
                 climateHum = "might be too humid and affecting your sleep cycle";
             } else if (result < 30) {
-                climateHum = "might not be humid enough and affecting your sleep cycle";
+                climateHum = "might not be humid enough and might be affecting your sleep cycle";
             } else if (result < max) {
                 climateHum = "is the recommended humidity for sleeping";
             } else if (result > min) {
@@ -114,6 +114,12 @@ public class HumFrag extends Fragment {
 
             climateResult.setText((climateHum));
 
+            // Write a message to the database
+
+
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference().child("HumAvg").push();
+            myRef.setValue(testingResultHum.getText().toString().trim());
 
 
 

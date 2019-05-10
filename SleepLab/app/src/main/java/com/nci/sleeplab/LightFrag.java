@@ -90,16 +90,16 @@ public class LightFrag extends Fragment {
 
             int result = calculate / 10;
 
-            TextView testingResult = getView().findViewById(R.id.lightResult);
+            TextView testingResultLight = getView().findViewById(R.id.lightResult);
 
-            testingResult.setText(" " + result);
+            testingResultLight.setText(" " + result);
 
             int max = 20;
-            int min = 14;
+            //int min = 14;
 
 
             if (result > 19) {
-                climateLight = "might be too high and affecting your sleep cycle";
+                climateLight = "might be too intense and affecting your sleep cycle";
             } else if (result < max) {
                 climateLight = "is the recommended light level for sleeping";
             }
@@ -108,6 +108,18 @@ public class LightFrag extends Fragment {
             TextView climateResult = getView().findViewById(R.id.climateLightResult);
 
             climateResult.setText((climateLight));
+
+
+            // Write a message to the database
+
+
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference().child("LightAvg").push();
+            myRef.setValue(testingResultLight.getText().toString().trim());
+
+
+
+
 
         }
 
@@ -145,6 +157,9 @@ public class LightFrag extends Fragment {
         }
 
     };
+
+
+
 }
 
 

@@ -1,10 +1,14 @@
 package com.nci.sleeplab;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 
@@ -34,6 +38,26 @@ public class SoundData extends AppCompatActivity {
 
 
     BarChart barChart;
+
+
+    //Home icon actionbar
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.home, menu);
+        return true;
+    }
+
+    //Home icon on select
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.home:
+                Intent intent = new Intent(this, MainActivity.class);
+                this.startActivity(intent);
+        }
+        return super.onOptionsItemSelected(item);
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -84,15 +108,15 @@ public class SoundData extends AppCompatActivity {
                 barDataSet.setColors(new int[]{Color.rgb(164, 198, 57)});
 
                 ArrayList<String> theSound= new ArrayList<>();
-                theSound.add("11");
+                theSound.add("11 / 12");
                 theSound.add("12");
-                theSound.add("1");
+                theSound.add("1 / 2");
                 theSound.add("2");
-                theSound.add("3");
+                theSound.add("3 / 4");
                 theSound.add("4");
-                theSound.add("5");
+                theSound.add("5 / 6");
                 theSound.add("6");
-                theSound.add("7");
+                theSound.add("7 / 8");
                 theSound.add("8");
 
 

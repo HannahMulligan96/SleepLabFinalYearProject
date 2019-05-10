@@ -12,4 +12,7 @@
         <item>Two</item>
     </string-array>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="linkTemp">
+        <a href="https://www.sleep.org/articles/temperature-for-sleep/"> Click here></a>
+        </string>
 </resources>

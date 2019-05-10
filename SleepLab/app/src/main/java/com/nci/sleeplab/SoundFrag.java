@@ -90,9 +90,9 @@ public class SoundFrag extends Fragment {
                 int result = calculate / 10;
 
 
-                TextView testingResult = getView().findViewById(R.id.soundResult);
+                TextView testingResultSound = getView().findViewById(R.id.soundResult);
 
-                testingResult.setText(" " + result);
+                testingResultSound.setText(" " + result +"ADC");
 
                 int max = 20;
                 int min = 14;
@@ -111,6 +111,15 @@ public class SoundFrag extends Fragment {
                 TextView climateResult = getView().findViewById(R.id.climateSoundResult);
 
                 climateResult.setText((climateSound));
+
+
+                // Write a message to the database
+
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference().child("SoundAvg").push();
+                myRef.setValue(testingResultSound.getText().toString().trim());
+
             }
 
 

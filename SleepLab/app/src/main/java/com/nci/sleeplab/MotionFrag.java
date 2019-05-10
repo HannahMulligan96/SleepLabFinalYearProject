@@ -100,9 +100,9 @@ public class MotionFrag extends Fragment {
             int result = calculate / 10;
 
 
-            TextView testingResult = getView().findViewById(R.id.motionResult);
+            TextView testingResultMotion = getView().findViewById(R.id.motionResult);
 
-            testingResult.setText(" " + result);
+            testingResultMotion.setText(" " + result);
 
             int max = 20;
             int min = 14;
@@ -121,6 +121,15 @@ public class MotionFrag extends Fragment {
             TextView climateResult = getView().findViewById(R.id.climateMotionResult);
 
             climateResult.setText((climateMotion));
+
+
+            // Write a message to the database
+
+
+            FirebaseDatabase database = FirebaseDatabase.getInstance();
+            DatabaseReference myRef = database.getReference().child("MotionAvg").push();
+            myRef.setValue(testingResultMotion.getText().toString().trim());
+
         }
 
 

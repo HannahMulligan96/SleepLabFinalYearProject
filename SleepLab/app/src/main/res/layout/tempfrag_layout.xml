@@ -274,7 +274,8 @@
         android:id="@+id/climateResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="88dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="TextView"
         android:textAlignment="center"
@@ -283,8 +284,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.884"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864" />
+        app:layout_constraintVertical_bias="0.884" />
 
     <TextView
         android:id="@+id/awakeBetween6"
@@ -388,23 +391,21 @@
         app:layout_constraintHorizontal_bias="0.744"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.529" /><![CDATA[
+        app:layout_constraintVertical_bias="0.529" />
 
-    "#9FB543"
-        android:textColor="#9FB543#9FB543"
-        app:
-        nstraintBottom_toBottomOf="parent"
+    <!--<TextView-->
+        <!--android:id="@+id/linkTemp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:clickable="true"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent" />-->
 
-        out_constraintEnd_toEndOf="parent"
-        a
-        _constraintHorizontal_bias="0.712"
-        ap
-        constraintStart_toStartOf="parent"
-
-        out_constraintTop_toTopOf="parent"
-        />
-
-    ]]><!--<TextView-->
+    <!--<TextView-->
         <!--android:id="@+id/climateResult"-->
         <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->

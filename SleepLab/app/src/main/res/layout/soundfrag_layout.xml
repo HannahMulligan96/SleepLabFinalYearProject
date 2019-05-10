@@ -17,7 +17,7 @@
         android:layout_marginBottom="8dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="The recommended sound level to
-        sleep is 40dB or below"
+        sleep is 40dB (180ADC) or below"
         android:textAlignment="center"
         android:textColor="#594A42"
         android:textSize="18sp"

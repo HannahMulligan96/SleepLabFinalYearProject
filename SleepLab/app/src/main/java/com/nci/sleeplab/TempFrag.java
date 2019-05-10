@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.text.Html;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +24,9 @@ import java.util.Calendar;
 
 public class TempFrag extends Fragment {
 
+
+
+
         private String climate;
 
         @Nullable
@@ -31,13 +36,28 @@ public class TempFrag extends Fragment {
                                  @Nullable Bundle savedInstanceState) {
             // Inflate the layout for this fragment
             View view = inflater.inflate(R.layout.tempfrag_layout, container, false);
+
+//            TextView linkText = getView().findViewById(R.id.linkTemp);
+//            linkText.setMovementMethod(LinkMovementMethod.getInstance());
+//            String text = "<a href='http://www.google.com'> Google </a>";
+//            linkText.setText(Html.fromHtml(text));
+
             //Calling to get data
             getData();
             getData2();
             return view;
+
+
+
+
         }
 
-        //getting temp values from firebase
+
+
+
+
+
+    //getting temp values from firebase
         private void getData() {
             FirebaseDatabase database = FirebaseDatabase.getInstance();
             DatabaseReference myRef = database.getReference("TempValues");
@@ -97,9 +117,9 @@ public class TempFrag extends Fragment {
 
             int result = calculate / 10;
 
-            TextView testingResult = getView().findViewById(R.id.testingResult);
+            TextView testingResultTemp = getView().findViewById(R.id.testingResult);
 
-            testingResult.setText(" " + result);
+            testingResultTemp.setText(" " + result);
 
             int max = 20; // Recommended max room temp
             int min = 14; // Recommended min room temp
@@ -110,7 +130,7 @@ public class TempFrag extends Fragment {
             } else if (result < 15) {
                 climate = "might be too cold and affecting your sleep cycle";
             } else if (result < max) {
-                climate = "is the recommended temperature";
+                climate = "is the recommended temperature for sleeping";
             } else if (result > min) {
                 climate = "is the recommended temperature for sleeping";
             }
@@ -119,7 +139,17 @@ public class TempFrag extends Fragment {
 
             climateResult.setText((climate));
 
-        }
+
+                // Write a message to the database
+
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference().child("TempAvg").push();
+                myRef.setValue(testingResultTemp.getText().toString().trim());
+
+
+            }
+
 
 
         @Override
@@ -148,11 +178,14 @@ public class TempFrag extends Fragment {
 
         }
 
+
         @Override
         public void onCancelled(DatabaseError error) {
         }
 
     };
+
+
 }
 
 
